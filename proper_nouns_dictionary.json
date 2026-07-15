@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "description": "固有名詞・ブランド名辞書 - テキストパース時に一塊として扱うべき表現",
+  "metadata": {
+    "lastUpdated": "2026-07-14T09:53:00.000Z",
+    "purpose": "「とは」等の文脈的表現と固有名詞を完全分離するための辞書"
+  },
+  "properNouns": {
+    "brands": [
+      "K-RISE",
+      "K-POP",
+      "BTS",
+      "LINE",
+      "TikTok",
+      "YouTube",
+      "Instagram"
+    ],
+    "organizations": [
+      "アジアモデルフェスティバル",
+      "HYBE",
+      "JYP",
+      "SM Entertainment",
+      "YG Entertainment"
+    ],
+    "people": [
+      "出口氏",
+      "出口",
+      "プロデューサー出口"
+    ],
+    "events": [
+      "オーディション",
+      "K-POPオーディション",
+      "グローバルオーディション"
+    ],
+    "technical": [
+      "Whisper",
+      "OpenAI",
+      "Janome",
+      "Remotion"
+    ]
+  },
+  "contextualExpressions": {
+    "definitions": [
+      "とは",
+      "というのは",
+      "って何",
+      "とは何か"
+    ],
+    "particles": [
+      "は",
+      "が",
+      "を",
+      "に",
+      "へ",
+      "と",
+      "から",
+      "まで",
+      "より",
+      "で",
+      "や",
+      "の",
+      "も"
+    ],
+    "conjunctions": [
+      "そして",
+      "しかし",
+      "だから",
+      "でも",
+      "また",
+      "さらに",
+      "ただし",
+      "なぜなら"
+    ]
+  },
+  "parsingRules": {
+    "properNounHandling": {
+      "rule": "固有名詞は必ず一塊として扱い、内部で分割しない",
+      "example": "K-RISE → ['K-RISE'] (NOT ['K', '-', 'R', 'I', 'S', 'E'])"
+    },
+    "contextualExpressionHandling": {
+      "rule": "「とは」等の文脈的表現は固有名詞の後に独立して配置",
+      "example": "K-RISEとは → ['K-RISE', 'と', 'は'] OR ['K-RISE', 'とは']"
+    },
+    "characterTimestampAllocation": {
+      "rule": "固有名詞内の各文字にもタイムスタンプを割り当てるが、セグメント分割時は一塊として扱う",
+      "example": "K-RISEの各文字 K,R,I,S,E に個別のタイムスタンプを付与しつつ、表示時は一括表示"
+    }
+  }
+}

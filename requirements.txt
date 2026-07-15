@@ -1,0 +1,23 @@
+# Python Dependencies for K-RISE Video Generation System
+
+# AI/ML APIs
+anthropic>=0.18.0          # Claude AI for script generation
+openai>=1.12.0             # OpenAI TTS and Whisper
+
+# Audio Processing
+pydub>=0.25.1              # Audio manipulation
+openai-whisper>=20231117   # Speech-to-text transcription
+
+# Japanese NLP (v3.1 新規追加)
+janome>=0.5.0              # 日本語形態素解析（文節境界検出用）
+
+# HTTP & API
+requests>=2.31.0           # HTTP requests for TikTok API
+
+# Environment & Configuration
+python-dotenv>=1.0.0       # Environment variable management
+
+# Optional: Development Tools
+# pytest>=7.4.0            # Testing framework
+# black>=23.0.0            # Code formatting
+# flake8>=6.0.0            # Code linting
