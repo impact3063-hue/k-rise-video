@@ -1,0 +1,721 @@
+{
+  "version": "6.0.0-RIIZE",
+  "metadata": {
+    "projectId": "K-RISE-RIIZE-Dance-Challenge",
+    "title": "K-RISE Dance Project - RIIZE Challenge Edition",
+    "generatedAt": "2026-07-18T11:27:00Z",
+    "fps": 30,
+    "duration": 15.0,
+    "totalFrames": 450,
+    "syncMode": "character-level",
+    "theme": "RIIZE-2026-Comeback",
+    "targetPlatform": ["TikTok", "Instagram Reels"],
+    "conversionGoal": "LINE Registration + Real Audition"
+  },
+  "content": {
+    "script": {
+      "original": "RIIZEの新曲ダンスチャレンジ、今すぐ挑戦！未経験でもプロが直接指導。本気で世界を目指すなら、今がチャンス。",
+      "transcribed": "RIIZEの新曲ダンスチャレンジ、今すぐ挑戦！未経験でもプロが直接指導。本気で世界を目指すなら、今がチャンス。"
+    },
+    "cta": {
+      "message": "続きはプロフィールURLから\nLINEへ登録\n\n限定ダンスワークショップ\n受付中",
+      "startTime": 12.0,
+      "duration": 3.0,
+      "action": "LINE Registration",
+      "urgency": "high"
+    }
+  },
+  "audio": {
+    "narration": {
+      "file": "audio.mp3",
+      "duration": 12.0,
+      "volume": 0.85,
+      "generationConfig": {
+        "model": "tts-1-hd",
+        "voice": "nova",
+        "speed": 1.05
+      }
+    },
+    "bgm": {
+      "file": "bg-music.mp3",
+      "volume": 0.25,
+      "loop": true,
+      "fadeIn": 0.3,
+      "fadeOut": 1.0
+    }
+  },
+  "renderParams": {
+    "fontMinRem": 3.2,
+    "fontVw": 9.5,
+    "fontMaxRem": 6.0,
+    "glow": 1.2,
+    "karaokeIntensity": "high"
+  },
+  "subtitles": [
+    {
+      "id": "line-1",
+      "text": "RIIZEの新曲ダンスチャレンジ",
+      "startFrame": 0,
+      "endFrame": 75,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 52,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "R",
+          "startTime": 0.0,
+          "endTime": 0.15,
+          "startFrame": 0,
+          "endFrame": 5,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "I",
+          "startTime": 0.15,
+          "endTime": 0.3,
+          "startFrame": 5,
+          "endFrame": 9,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "I",
+          "startTime": 0.3,
+          "endTime": 0.45,
+          "startFrame": 9,
+          "endFrame": 14,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "Z",
+          "startTime": 0.45,
+          "endTime": 0.6,
+          "startFrame": 14,
+          "endFrame": 18,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "E",
+          "startTime": 0.6,
+          "endTime": 0.75,
+          "startFrame": 18,
+          "endFrame": 23,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "の",
+          "startTime": 0.75,
+          "endTime": 0.9,
+          "startFrame": 23,
+          "endFrame": 27,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "新",
+          "startTime": 0.9,
+          "endTime": 1.05,
+          "startFrame": 27,
+          "endFrame": 32,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "曲",
+          "startTime": 1.05,
+          "endTime": 1.2,
+          "startFrame": 32,
+          "endFrame": 36,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ダ",
+          "startTime": 1.2,
+          "endTime": 1.35,
+          "startFrame": 36,
+          "endFrame": 41,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ン",
+          "startTime": 1.35,
+          "endTime": 1.5,
+          "startFrame": 41,
+          "endFrame": 45,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ス",
+          "startTime": 1.5,
+          "endTime": 1.65,
+          "startFrame": 45,
+          "endFrame": 50,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "チ",
+          "startTime": 1.65,
+          "endTime": 1.8,
+          "startFrame": 50,
+          "endFrame": 54,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ャ",
+          "startTime": 1.8,
+          "endTime": 1.95,
+          "startFrame": 54,
+          "endFrame": 59,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "レ",
+          "startTime": 1.95,
+          "endTime": 2.1,
+          "startFrame": 59,
+          "endFrame": 63,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ン",
+          "startTime": 2.1,
+          "endTime": 2.25,
+          "startFrame": 63,
+          "endFrame": 68,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ジ",
+          "startTime": 2.25,
+          "endTime": 2.5,
+          "startFrame": 68,
+          "endFrame": 75,
+          "duration": 0.25,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 2.5,
+      "characterCount": 16,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 16,
+        "emphasis": "high"
+      }
+    },
+    {
+      "id": "line-2",
+      "text": "、今すぐ挑戦！",
+      "startFrame": 90,
+      "endFrame": 135,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 52,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "、",
+          "startTime": 3.0,
+          "endTime": 3.15,
+          "startFrame": 90,
+          "endFrame": 95,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "今",
+          "startTime": 3.15,
+          "endTime": 3.3,
+          "startFrame": 95,
+          "endFrame": 99,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "す",
+          "startTime": 3.3,
+          "endTime": 3.45,
+          "startFrame": 99,
+          "endFrame": 104,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ぐ",
+          "startTime": 3.45,
+          "endTime": 3.6,
+          "startFrame": 104,
+          "endFrame": 108,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "挑",
+          "startTime": 3.6,
+          "endTime": 3.8,
+          "startFrame": 108,
+          "endFrame": 114,
+          "duration": 0.2,
+          "wordIndex": 0
+        },
+        {
+          "char": "戦",
+          "startTime": 3.8,
+          "endTime": 4.0,
+          "startFrame": 114,
+          "endFrame": 120,
+          "duration": 0.2,
+          "wordIndex": 0
+        },
+        {
+          "char": "！",
+          "startTime": 4.0,
+          "endTime": 4.5,
+          "startFrame": 120,
+          "endFrame": 135,
+          "duration": 0.5,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.5,
+      "characterCount": 7,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 7,
+        "emphasis": "high"
+      }
+    },
+    {
+      "id": "line-3",
+      "text": "未経験でもプロが直接指導。",
+      "startFrame": 150,
+      "endFrame": 225,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 52,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "未",
+          "startTime": 5.0,
+          "endTime": 5.15,
+          "startFrame": 150,
+          "endFrame": 155,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "経",
+          "startTime": 5.15,
+          "endTime": 5.3,
+          "startFrame": 155,
+          "endFrame": 159,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "験",
+          "startTime": 5.3,
+          "endTime": 5.45,
+          "startFrame": 159,
+          "endFrame": 164,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "で",
+          "startTime": 5.45,
+          "endTime": 5.6,
+          "startFrame": 164,
+          "endFrame": 168,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "も",
+          "startTime": 5.6,
+          "endTime": 5.75,
+          "startFrame": 168,
+          "endFrame": 173,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "プ",
+          "startTime": 5.75,
+          "endTime": 5.9,
+          "startFrame": 173,
+          "endFrame": 177,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ロ",
+          "startTime": 5.9,
+          "endTime": 6.05,
+          "startFrame": 177,
+          "endFrame": 182,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "が",
+          "startTime": 6.05,
+          "endTime": 6.2,
+          "startFrame": 182,
+          "endFrame": 186,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "直",
+          "startTime": 6.2,
+          "endTime": 6.35,
+          "startFrame": 186,
+          "endFrame": 191,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "接",
+          "startTime": 6.35,
+          "endTime": 6.5,
+          "startFrame": 191,
+          "endFrame": 195,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "指",
+          "startTime": 6.5,
+          "endTime": 6.65,
+          "startFrame": 195,
+          "endFrame": 200,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "導",
+          "startTime": 6.65,
+          "endTime": 6.8,
+          "startFrame": 200,
+          "endFrame": 204,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 6.8,
+          "endTime": 7.5,
+          "startFrame": 204,
+          "endFrame": 225,
+          "duration": 0.7,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 2.5,
+      "characterCount": 13,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 13,
+        "emphasis": "medium"
+      }
+    },
+    {
+      "id": "line-4",
+      "text": "本気で世界を目指すなら、",
+      "startFrame": 240,
+      "endFrame": 300,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 52,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "本",
+          "startTime": 8.0,
+          "endTime": 8.15,
+          "startFrame": 240,
+          "endFrame": 245,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "気",
+          "startTime": 8.15,
+          "endTime": 8.3,
+          "startFrame": 245,
+          "endFrame": 249,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "で",
+          "startTime": 8.3,
+          "endTime": 8.45,
+          "startFrame": 249,
+          "endFrame": 254,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "世",
+          "startTime": 8.45,
+          "endTime": 8.6,
+          "startFrame": 254,
+          "endFrame": 258,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "界",
+          "startTime": 8.6,
+          "endTime": 8.75,
+          "startFrame": 258,
+          "endFrame": 263,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "を",
+          "startTime": 8.75,
+          "endTime": 8.9,
+          "startFrame": 263,
+          "endFrame": 267,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "目",
+          "startTime": 8.9,
+          "endTime": 9.05,
+          "startFrame": 267,
+          "endFrame": 272,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "指",
+          "startTime": 9.05,
+          "endTime": 9.2,
+          "startFrame": 272,
+          "endFrame": 276,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "す",
+          "startTime": 9.2,
+          "endTime": 9.35,
+          "startFrame": 276,
+          "endFrame": 281,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "な",
+          "startTime": 9.35,
+          "endTime": 9.5,
+          "startFrame": 281,
+          "endFrame": 285,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ら",
+          "startTime": 9.5,
+          "endTime": 9.65,
+          "startFrame": 285,
+          "endFrame": 290,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "、",
+          "startTime": 9.65,
+          "endTime": 10.0,
+          "startFrame": 290,
+          "endFrame": 300,
+          "duration": 0.35,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 2.0,
+      "characterCount": 12,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 12,
+        "emphasis": "high"
+      }
+    },
+    {
+      "id": "line-5",
+      "text": "今がチャンス。",
+      "startFrame": 315,
+      "endFrame": 360,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 52,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "今",
+          "startTime": 10.5,
+          "endTime": 10.65,
+          "startFrame": 315,
+          "endFrame": 320,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "が",
+          "startTime": 10.65,
+          "endTime": 10.8,
+          "startFrame": 320,
+          "endFrame": 324,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "チ",
+          "startTime": 10.8,
+          "endTime": 10.95,
+          "startFrame": 324,
+          "endFrame": 329,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ャ",
+          "startTime": 10.95,
+          "endTime": 11.1,
+          "startFrame": 329,
+          "endFrame": 333,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ン",
+          "startTime": 11.1,
+          "endTime": 11.25,
+          "startFrame": 333,
+          "endFrame": 338,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "ス",
+          "startTime": 11.25,
+          "endTime": 11.4,
+          "startFrame": 338,
+          "endFrame": 342,
+          "duration": 0.15,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 11.4,
+          "endTime": 12.0,
+          "startFrame": 342,
+          "endFrame": 360,
+          "duration": 0.6,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.5,
+      "characterCount": 7,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 7,
+        "emphasis": "high"
+      }
+    },
+    {
+      "id": "cta-line",
+      "text": "続きはプロフィールURLから\nLINEへ登録\n\n限定ダンスワークショップ\n受付中",
+      "startFrame": 360,
+      "endFrame": 450,
+      "style": {
+        "animation": "fadeInScale",
+        "type": "cta",
+        "fontFamily": "Noto Sans JP",
+        "fontSize": 46,
+        "color": "#FFFACD",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.0
+      },
+      "characters": [],
+      "duration": 3.0,
+      "characterCount": 35,
+      "metadata": {
+        "isKeyPhrase": false,
+        "characterCount": 35,
+        "ctaType": "LINE-registration",
+        "urgency": "high"
+      }
+    }
+  ],
+  "analytics": {
+    "totalWords": 5,
+    "averageWordDuration": 0.18,
+    "speechRate": 340,
+    "pauseCount": 4,
+    "longestPause": 0.5
+  },
+  "marketing": {
+    "trend": "RIIZE-2026-Comeback",
+    "targetAudience": "K-POP Dance Enthusiasts",
+    "conversionFunnel": [
+      "TikTok/Reels View",
+      "Profile Visit",
+      "LINE Registration",
+      "Workshop Booking",
+      "Real Audition"
+    ],
+    "hashtags": [
+      "#RIIZE",
+      "#RIIZEChallenge",
+      "#KRISEDanceProject",
+      "#ダンスチャレンジ",
+      "#KPOP",
+      "#ダンスオーディション"
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "version": "3.2.0",
+  "metadata": {
+    "projectId": "K-RISE-TikTok-3",
+    "title": "K-RISE Dance Project - Video 3",
+    "generatedAt": "2026-07-15T11:28:00Z",
+    "fps": 30,
+    "duration": 15.0,
+    "totalFrames": 450,
+    "syncMode": "character-level"
+  },
+  "content": {
+    "script": {
+      "original": "本気で目指すなら",
+      "transcribed": "本気で目指すなら"
+    }
+  },
+  "audio": {
+    "narration": {
+      "file": "audio.mp3",
+      "duration": 15.0,
+      "volume": 0.8,
+      "generationConfig": {
+        "model": "tts-1",
+        "voice": "alloy",
+        "speed": 1.0
+      }
+    },
+    "bgm": {
+      "file": "bg-music.mp3",
+      "volume": 0.3,
+      "loop": true,
+      "fadeIn": 0.5,
+      "fadeOut": 0.5
+    }
+  },
+  "subtitles": [
+    {
+      "id": "line-1",
+      "text": "本気で",
+      "startFrame": 30,
+      "endFrame": 50,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "本",
+          "startTime": 1.0,
+          "endTime": 1.167,
+          "startFrame": 30,
+          "endFrame": 35,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "気",
+          "startTime": 1.167,
+          "endTime": 1.333,
+          "startFrame": 35,
+          "endFrame": 40,
+          "duration": 0.166,
+          "wordIndex": 0
+        },
+        {
+          "char": "で",
+          "startTime": 1.333,
+          "endTime": 1.667,
+          "startFrame": 40,
+          "endFrame": 50,
+          "duration": 0.334,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 0.667,
+      "characterCount": 3,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 3
+      }
+    },
+    {
+      "id": "line-2",
+      "text": "目指すなら",
+      "startFrame": 51,
+      "endFrame": 90,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.2
+      },
+      "characters": [
+        {
+          "char": "目",
+          "startTime": 1.7,
+          "endTime": 1.933,
+          "startFrame": 51,
+          "endFrame": 58,
+          "duration": 0.233,
+          "wordIndex": 1
+        },
+        {
+          "char": "指",
+          "startTime": 1.933,
+          "endTime": 2.2,
+          "startFrame": 58,
+          "endFrame": 66,
+          "duration": 0.267,
+          "wordIndex": 1
+        },
+        {
+          "char": "す",
+          "startTime": 2.2,
+          "endTime": 2.467,
+          "startFrame": 66,
+          "endFrame": 74,
+          "duration": 0.267,
+          "wordIndex": 1
+        },
+        {
+          "char": "な",
+          "startTime": 2.467,
+          "endTime": 2.733,
+          "startFrame": 74,
+          "endFrame": 82,
+          "duration": 0.266,
+          "wordIndex": 1
+        },
+        {
+          "char": "ら",
+          "startTime": 2.733,
+          "endTime": 3.0,
+          "startFrame": 82,
+          "endFrame": 90,
+          "duration": 0.267,
+          "wordIndex": 1
+        }
+      ],
+      "duration": 1.3,
+      "characterCount": 5,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 5
+      }
+    },
+    {
+      "id": "cta",
+      "text": "伝説のP出口氏が\n審査！\nリアルオーディション\n開催\n詳細はプロフの\nLINEから",
+      "startFrame": 390,
+      "endFrame": 450,
+      "style": {
+        "animation": "fadeInScale",
+        "type": "cta",
+        "fontFamily": "Noto Sans JP",
+        "fontSize": 42,
+        "color": "#FFFACD",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.0
+      },
+      "characters": [],
+      "duration": 2.0,
+      "characterCount": 42,
+      "metadata": {
+        "isKeyPhrase": false,
+        "characterCount": 42
+      }
+    }
+  ],
+  "analytics": {
+    "totalWords": 2,
+    "averageWordDuration": 0.985,
+    "speechRate": 120,
+    "pauseCount": 1,
+    "longestPause": 0.033
+  }
+}

@@ -1,0 +1,824 @@
+{
+  "version": "5.0.0",
+  "metadata": {
+    "projectId": "K-RISE-TikTok-3",
+    "title": "K-RISE Dance Project - Auto",
+    "generatedAt": "2026-07-18T04:26:29Z",
+    "fps": 30,
+    "duration": 13.867,
+    "totalFrames": 416,
+    "syncMode": "character-level"
+  },
+  "content": {
+    "script": {
+      "original": "RIIZEの高速シンクロには秘密がある。動きを合わせるな、呼吸を合わせろ。息が揃えば九人がひとつになる。世界基準の群舞は呼吸から始まる。",
+      "transcribed": "RIIZEの高速シンクロには秘密がある。動きを合わせるな、呼吸を合わせろ。息が揃えば九人がひとつになる。世界基準の群舞は呼吸から始まる。"
+    }
+  },
+  "audio": {
+    "narration": {
+      "file": "audio.mp3",
+      "duration": 11.856,
+      "volume": 0.8,
+      "generationConfig": {
+        "model": "tts-1",
+        "voice": "alloy",
+        "speed": 1.0
+      }
+    },
+    "bgm": {
+      "file": "bg-music.mp3",
+      "volume": 0.3,
+      "loop": true,
+      "fadeIn": 0.5,
+      "fadeOut": 0.5
+    }
+  },
+  "renderParams": {
+    "fontMinRem": 3.0,
+    "fontVw": 9.0,
+    "fontMaxRem": 5.5,
+    "glow": 1.0
+  },
+  "subtitles": [
+    {
+      "id": "line-1",
+      "text": "RIIZEの高速シンクロには秘密がある",
+      "startFrame": 0,
+      "endFrame": 78,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "R",
+          "startTime": 0.0,
+          "endTime": 0.133,
+          "startFrame": 0,
+          "endFrame": 4,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "I",
+          "startTime": 0.133,
+          "endTime": 0.267,
+          "startFrame": 4,
+          "endFrame": 8,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "I",
+          "startTime": 0.267,
+          "endTime": 0.4,
+          "startFrame": 8,
+          "endFrame": 12,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "Z",
+          "startTime": 0.4,
+          "endTime": 0.533,
+          "startFrame": 12,
+          "endFrame": 16,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "E",
+          "startTime": 0.533,
+          "endTime": 0.7,
+          "startFrame": 16,
+          "endFrame": 21,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "の",
+          "startTime": 0.7,
+          "endTime": 0.833,
+          "startFrame": 21,
+          "endFrame": 25,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "高",
+          "startTime": 0.833,
+          "endTime": 0.967,
+          "startFrame": 25,
+          "endFrame": 29,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "速",
+          "startTime": 0.967,
+          "endTime": 1.1,
+          "startFrame": 29,
+          "endFrame": 33,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "シ",
+          "startTime": 1.1,
+          "endTime": 1.233,
+          "startFrame": 33,
+          "endFrame": 37,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ン",
+          "startTime": 1.233,
+          "endTime": 1.367,
+          "startFrame": 37,
+          "endFrame": 41,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ク",
+          "startTime": 1.367,
+          "endTime": 1.5,
+          "startFrame": 41,
+          "endFrame": 45,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ロ",
+          "startTime": 1.5,
+          "endTime": 1.633,
+          "startFrame": 45,
+          "endFrame": 49,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "に",
+          "startTime": 1.633,
+          "endTime": 1.767,
+          "startFrame": 49,
+          "endFrame": 53,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "は",
+          "startTime": 1.767,
+          "endTime": 1.9,
+          "startFrame": 53,
+          "endFrame": 57,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "秘",
+          "startTime": 1.9,
+          "endTime": 2.067,
+          "startFrame": 57,
+          "endFrame": 62,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "密",
+          "startTime": 2.067,
+          "endTime": 2.2,
+          "startFrame": 62,
+          "endFrame": 66,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "が",
+          "startTime": 2.2,
+          "endTime": 2.333,
+          "startFrame": 66,
+          "endFrame": 70,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "あ",
+          "startTime": 2.333,
+          "endTime": 2.467,
+          "startFrame": 70,
+          "endFrame": 74,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "る",
+          "startTime": 2.467,
+          "endTime": 2.6,
+          "startFrame": 74,
+          "endFrame": 78,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 2.599,
+      "characterCount": 19,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 19
+      }
+    },
+    {
+      "id": "line-2",
+      "text": "。動きを合わせる",
+      "startFrame": 96,
+      "endFrame": 131,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "。",
+          "startTime": 3.2,
+          "endTime": 3.333,
+          "startFrame": 96,
+          "endFrame": 100,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "動",
+          "startTime": 3.333,
+          "endTime": 3.5,
+          "startFrame": 100,
+          "endFrame": 105,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "き",
+          "startTime": 3.5,
+          "endTime": 3.633,
+          "startFrame": 105,
+          "endFrame": 109,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "を",
+          "startTime": 3.633,
+          "endTime": 3.8,
+          "startFrame": 109,
+          "endFrame": 114,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "合",
+          "startTime": 3.8,
+          "endTime": 3.933,
+          "startFrame": 114,
+          "endFrame": 118,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "わ",
+          "startTime": 3.933,
+          "endTime": 4.067,
+          "startFrame": 118,
+          "endFrame": 122,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "せ",
+          "startTime": 4.067,
+          "endTime": 4.233,
+          "startFrame": 122,
+          "endFrame": 127,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "る",
+          "startTime": 4.233,
+          "endTime": 4.367,
+          "startFrame": 127,
+          "endFrame": 131,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.163,
+      "characterCount": 8,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 8
+      }
+    },
+    {
+      "id": "line-3",
+      "text": "な、呼吸を合わ",
+      "startFrame": 139,
+      "endFrame": 170,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "な",
+          "startTime": 4.633,
+          "endTime": 4.767,
+          "startFrame": 139,
+          "endFrame": 143,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "、",
+          "startTime": 4.767,
+          "endTime": 4.933,
+          "startFrame": 143,
+          "endFrame": 148,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "呼",
+          "startTime": 4.933,
+          "endTime": 5.067,
+          "startFrame": 148,
+          "endFrame": 152,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "吸",
+          "startTime": 5.067,
+          "endTime": 5.233,
+          "startFrame": 152,
+          "endFrame": 157,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "を",
+          "startTime": 5.233,
+          "endTime": 5.367,
+          "startFrame": 157,
+          "endFrame": 161,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "合",
+          "startTime": 5.367,
+          "endTime": 5.533,
+          "startFrame": 161,
+          "endFrame": 166,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "わ",
+          "startTime": 5.533,
+          "endTime": 5.667,
+          "startFrame": 166,
+          "endFrame": 170,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.014,
+      "characterCount": 7,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 7
+      }
+    },
+    {
+      "id": "line-4",
+      "text": "せろ。息が揃えば九人がひとつ",
+      "startFrame": 192,
+      "endFrame": 251,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "せ",
+          "startTime": 6.4,
+          "endTime": 6.533,
+          "startFrame": 192,
+          "endFrame": 196,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ろ",
+          "startTime": 6.533,
+          "endTime": 6.667,
+          "startFrame": 196,
+          "endFrame": 200,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 6.667,
+          "endTime": 6.833,
+          "startFrame": 200,
+          "endFrame": 205,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "息",
+          "startTime": 6.833,
+          "endTime": 6.967,
+          "startFrame": 205,
+          "endFrame": 209,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "が",
+          "startTime": 6.967,
+          "endTime": 7.1,
+          "startFrame": 209,
+          "endFrame": 213,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "揃",
+          "startTime": 7.1,
+          "endTime": 7.233,
+          "startFrame": 213,
+          "endFrame": 217,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "え",
+          "startTime": 7.233,
+          "endTime": 7.4,
+          "startFrame": 217,
+          "endFrame": 222,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "ば",
+          "startTime": 7.4,
+          "endTime": 7.533,
+          "startFrame": 222,
+          "endFrame": 226,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "九",
+          "startTime": 7.533,
+          "endTime": 7.667,
+          "startFrame": 226,
+          "endFrame": 230,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "人",
+          "startTime": 7.667,
+          "endTime": 7.8,
+          "startFrame": 230,
+          "endFrame": 234,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "が",
+          "startTime": 7.8,
+          "endTime": 7.933,
+          "startFrame": 234,
+          "endFrame": 238,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ひ",
+          "startTime": 7.933,
+          "endTime": 8.1,
+          "startFrame": 238,
+          "endFrame": 243,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "と",
+          "startTime": 8.1,
+          "endTime": 8.233,
+          "startFrame": 243,
+          "endFrame": 247,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "つ",
+          "startTime": 8.233,
+          "endTime": 8.367,
+          "startFrame": 247,
+          "endFrame": 251,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.947,
+      "characterCount": 14,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 14
+      }
+    },
+    {
+      "id": "line-5",
+      "text": "になる。世界基準の群",
+      "startFrame": 264,
+      "endFrame": 305,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "に",
+          "startTime": 8.8,
+          "endTime": 8.933,
+          "startFrame": 264,
+          "endFrame": 268,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "な",
+          "startTime": 8.933,
+          "endTime": 9.067,
+          "startFrame": 268,
+          "endFrame": 272,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "る",
+          "startTime": 9.067,
+          "endTime": 9.2,
+          "startFrame": 272,
+          "endFrame": 276,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 9.2,
+          "endTime": 9.333,
+          "startFrame": 276,
+          "endFrame": 280,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "世",
+          "startTime": 9.333,
+          "endTime": 9.467,
+          "startFrame": 280,
+          "endFrame": 284,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "界",
+          "startTime": 9.467,
+          "endTime": 9.633,
+          "startFrame": 284,
+          "endFrame": 289,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "基",
+          "startTime": 9.633,
+          "endTime": 9.767,
+          "startFrame": 289,
+          "endFrame": 293,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "準",
+          "startTime": 9.767,
+          "endTime": 9.9,
+          "startFrame": 293,
+          "endFrame": 297,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "の",
+          "startTime": 9.9,
+          "endTime": 10.033,
+          "startFrame": 297,
+          "endFrame": 301,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "群",
+          "startTime": 10.033,
+          "endTime": 10.167,
+          "startFrame": 301,
+          "endFrame": 305,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.346,
+      "characterCount": 10,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 10
+      }
+    },
+    {
+      "id": "line-6",
+      "text": "舞は呼吸から始まる。",
+      "startFrame": 312,
+      "endFrame": 356,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "舞",
+          "startTime": 10.4,
+          "endTime": 10.533,
+          "startFrame": 312,
+          "endFrame": 316,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "は",
+          "startTime": 10.533,
+          "endTime": 10.7,
+          "startFrame": 316,
+          "endFrame": 321,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "呼",
+          "startTime": 10.7,
+          "endTime": 10.833,
+          "startFrame": 321,
+          "endFrame": 325,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "吸",
+          "startTime": 10.833,
+          "endTime": 11.0,
+          "startFrame": 325,
+          "endFrame": 330,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "か",
+          "startTime": 11.0,
+          "endTime": 11.133,
+          "startFrame": 330,
+          "endFrame": 334,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ら",
+          "startTime": 11.133,
+          "endTime": 11.267,
+          "startFrame": 334,
+          "endFrame": 338,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "始",
+          "startTime": 11.267,
+          "endTime": 11.433,
+          "startFrame": 338,
+          "endFrame": 343,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "ま",
+          "startTime": 11.433,
+          "endTime": 11.567,
+          "startFrame": 343,
+          "endFrame": 347,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "る",
+          "startTime": 11.567,
+          "endTime": 11.733,
+          "startFrame": 347,
+          "endFrame": 352,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 11.733,
+          "endTime": 11.867,
+          "startFrame": 352,
+          "endFrame": 356,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.445,
+      "characterCount": 10,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 10
+      }
+    },
+    {
+      "id": "cta",
+      "text": "伝説のP出口氏が\n審査！\nリアルオーディション\n開催\n詳細はプロフの\nLINEから",
+      "startFrame": 356,
+      "endFrame": 416,
+      "style": {
+        "animation": "fadeInScale",
+        "type": "cta",
+        "fontFamily": "Noto Sans JP",
+        "fontSize": 42,
+        "color": "#FFFACD",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.0
+      },
+      "characters": [],
+      "duration": 2.0,
+      "characterCount": 41,
+      "metadata": {
+        "isKeyPhrase": false,
+        "characterCount": 41
+      }
+    }
+  ],
+  "analytics": {
+    "totalWords": 6,
+    "averageWordDuration": 0.174,
+    "speechRate": 344,
+    "pauseCount": 5,
+    "longestPause": 0.3
+  }
+}

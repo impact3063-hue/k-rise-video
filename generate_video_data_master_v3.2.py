@@ -216,12 +216,13 @@ def detect_phrase_boundaries_with_proper_nouns(
 
 def segment_text_by_phrase_with_proper_nouns(
     character_data: List[Dict[str, Any]],
-    max_chars: int = 14,
+    max_chars: int = 18,
     max_duration: float = 3.0,
     proper_noun_parser: Optional[Any] = None
 ) -> List[List[Dict[str, Any]]]:
     """
     🎯 v3.2: 固有名詞を保護したテキストセグメント分割
+    🚨 緊急修正: 最大文字数を15-18文字に厳格化（スマホ縦画面対応）
     """
     if not character_data:
         return []
@@ -264,19 +265,20 @@ def segment_text_by_phrase_with_proper_nouns(
                 is_inside_proper_noun = True
                 break
         
-        # 分割条件の判定
+        # 分割条件の判定（🚨 緊急修正: 18文字厳守）
         should_break = False
         
         # 条件1: 句読点（最優先、ただし固有名詞内部は除く）
         if is_punctuation and not is_inside_proper_noun:
             should_break = True
         
-        # 条件2: max_charsに達し、かつ境界位置（固有名詞内部は除く）
+        # 条件2: 18文字に達し、かつ境界位置（固有名詞内部は除く）
         elif current_length >= max_chars and is_boundary and not is_inside_proper_noun:
             should_break = True
         
-        # 条件3: max_charsを大幅に超過（緊急分割、ただし固有名詞内部は除く）
-        elif current_length > max_chars + 3 and not is_inside_proper_noun:
+        # 条件3: 18文字を超過（緊急分割、ただし固有名詞内部は除く）
+        # 🚨 修正: +3の猶予を削除し、18文字で厳格に分割
+        elif current_length > max_chars and not is_inside_proper_noun:
             should_break = True
         
         # 条件4: 時間オーバー（固有名詞内部は除く）
@@ -297,14 +299,15 @@ def segment_text_by_phrase_with_proper_nouns(
 
 
 def build_karaoke_subtitles_with_proper_nouns(
-    words: List[Dict[str, Any]], 
+    words: List[Dict[str, Any]],
     fps: int = 30,
-    max_chars: int = 14,
+    max_chars: int = 18,
     max_duration: float = 3.0,
     proper_noun_parser: Optional[Any] = None
 ) -> List[Dict[str, Any]]:
     """
     🎤 カラオケスタイルの字幕生成（固有名詞保護版）
+    🚨 緊急修正: 最大18文字に制限し、10文字前後で改行を挿入
     """
     if not words:
         return []
@@ -334,6 +337,23 @@ def build_karaoke_subtitles_with_proper_nouns(
         # テキスト結合時にも句読点を除去
         text = "".join([c["char"] for c in segment])
         text = clean_text_punctuation(text, strict=True)
+        
+        # 🚨 緊急修正: 10文字前後で自動改行を挿入
+        if len(text) > 12:
+            # 10文字前後の適切な位置で改行
+            mid_point = len(text) // 2
+            # 8-12文字の範囲で最適な分割点を探す
+            best_split = mid_point
+            for offset in range(0, 5):
+                if mid_point - offset >= 8 and mid_point - offset <= 12:
+                    best_split = mid_point - offset
+                    break
+                elif mid_point + offset >= 8 and mid_point + offset <= 12:
+                    best_split = mid_point + offset
+                    break
+            
+            # 改行を挿入
+            text = text[:best_split] + "\n" + text[best_split:]
         
         start_time = segment[0]["startTime"]
         end_time = segment[-1]["endTime"]
@@ -565,9 +585,9 @@ def generate_complete_video_data(
     print("\n🎤 Step 4/5: Building proper-noun-aware karaoke subtitles...")
     try:
         subtitles = build_karaoke_subtitles_with_proper_nouns(
-            words, fps=fps, max_chars=14, proper_noun_parser=proper_noun_parser
+            words, fps=fps, max_chars=18, proper_noun_parser=proper_noun_parser
         )
-        print(f"   ✅ Generated {len(subtitles)} subtitle segments")
+        print(f"   ✅ Generated {len(subtitles)} subtitle segments (max 18 chars)")
     except Exception as e:
         print(f"   ❌ Error building subtitles: {e}")
         raise

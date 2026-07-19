@@ -1,0 +1,13 @@
+{
+  "fontMinRem": 3.0,
+  "fontVw": 9.0,
+  "fontMaxRem": 5.5,
+  "glow": 1.0,
+  "scaleFactor": 1.15,
+  "ctaText": "伝説のP出口氏が\n審査！\nリアルオーディション\n開催\n詳細はプロフの\nLINEから",
+  "ctaSeconds": 2.0,
+  "ttsVoice": "alloy",
+  "ttsModel": "tts-1",
+  "ttsSpeed": 1.0,
+  "llmModel": "gpt-4o-mini"
+}

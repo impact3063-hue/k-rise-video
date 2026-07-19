@@ -2,8 +2,11 @@ import { Composition } from "remotion";
 import { MyComposition } from "./Composition";
 import { KpopAuditionPattern1 } from "./KpopAuditionPattern1";
 import { AudioDrivenComposition } from "./AudioDrivenComposition";
+import { KRiseTikTok3 } from "./KRiseTikTok3";
+import { KRiseTikTok3Enhanced } from "./KRiseTikTok3Enhanced";
 import subtitles from "../public/sample-video.json";
 import subtitlesPattern1 from "../public/kpop-audition-pattern1.json";
+import videoDataMaster from "../public/video-data-master.json";
 
 export const Root: React.FC = () => {
   const lastSubtitle = subtitles[subtitles.length - 1];
@@ -11,6 +14,9 @@ export const Root: React.FC = () => {
 
   // K-POPオーディション パターン1の動画の長さ（15秒 = 450フレーム）
   const durationPattern1 = 450;
+
+  // K-RISE TikTok 3の動画の長さ（video-data-master.jsonから取得）
+  const durationTikTok3 = (videoDataMaster as any).metadata?.totalFrames || 450;
 
   return (
     <>
@@ -49,6 +55,27 @@ export const Root: React.FC = () => {
           bgImageFile: "bg-cyber.png",
           logoFile: "logo.png",
         }}
+      />
+
+      {/* 🎯 K-RISE TikTok 3: 1文字単位の超精密同期（Character-Level Sync） */}
+      <Composition
+        id="KRiseTikTok3"
+        component={KRiseTikTok3}
+        durationInFrames={durationTikTok3}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* 🔥 K-RISE TikTok 3 Enhanced: RIIZE Dance Challenge Edition */}
+      {/* 強化版：ゴールドグロー5層 + ラスト3秒固定LINE CTA */}
+      <Composition
+        id="KRiseTikTok3Enhanced"
+        component={KRiseTikTok3Enhanced}
+        durationInFrames={450}
+        fps={30}
+        width={1080}
+        height={1920}
       />
     </>
   );

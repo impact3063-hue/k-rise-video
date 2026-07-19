@@ -1,845 +1,774 @@
 {
-  "version": "3.2",
+  "version": "5.0.0",
   "metadata": {
-    "projectId": "kpop-audition",
-    "title": "kpop-audition - Character-Level Sync v3.2",
-    "generatedAt": "2026-07-14T11:23:10.461107Z",
+    "projectId": "K-RISE-TikTok-3",
+    "title": "K-RISE Dance Project - Auto",
+    "generatedAt": "2026-07-18T04:27:55Z",
     "fps": 30,
-    "duration": 12.979999542236328,
-    "totalFrames": 389,
-    "syncMode": "character-level-proper-noun-aware",
-    "segmentationEngine": "janome",
-    "properNounProtection": true
+    "duration": 14.0,
+    "totalFrames": 420,
+    "syncMode": "character-level"
   },
   "content": {
     "script": {
-      "original": "伝説のプロデューサー出口氏による直接審査。未来のK-POPスターを発掘するリアルオーディション、残された席はあとわずか。今すぐ公式LINEからエントリーせよ。",
-      "transcribed": "伝説のプロデューサー出口氏による直接審査 未来のK-POPスターを発掘するリアルオーディション 残された席はあとわずか 今すぐ公式LINEからエントリーせよ"
+      "original": "ダンス未経験でも世界へ行ける。条件はただひとつ、十ヶ月間毎日鏡の前に立つこと。才能は言い訳にならない。本気の覚悟だけが君を変える。",
+      "transcribed": "ダンス未経験でも世界へ行ける。条件はただひとつ、十ヶ月間毎日鏡の前に立つこと。才能は言い訳にならない。本気の覚悟だけが君を変える。"
     }
   },
   "audio": {
     "narration": {
       "file": "audio.mp3",
-      "duration": 12.979999542236328,
-      "volume": 4.0,
+      "duration": 12.0,
+      "volume": 0.8,
       "generationConfig": {
-        "model": "tts-1-hd",
-        "voice": "nova",
+        "model": "tts-1",
+        "voice": "alloy",
         "speed": 1.0
       }
     },
     "bgm": {
       "file": "bg-music.mp3",
-      "volume": 0.08,
+      "volume": 0.3,
       "loop": true,
       "fadeIn": 0.5,
       "fadeOut": 0.5
     }
   },
+  "renderParams": {
+    "fontMinRem": 3.0,
+    "fontVw": 9.0,
+    "fontMaxRem": 5.5,
+    "glow": 1.0
+  },
   "subtitles": [
     {
-      "id": "sub_000",
-      "text": "伝説のプロデューサー出口氏による",
-      "startTime": 0.0,
-      "endTime": 2.32,
+      "id": "line-1",
+      "text": "ダンス未経験でも世界へ行ける",
       "startFrame": 0,
-      "endFrame": 68,
-      "duration": 2.32,
-      "characterCount": 16,
+      "endFrame": 57,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
       "characters": [
         {
-          "char": "伝",
+          "char": "ダ",
           "startTime": 0.0,
-          "endTime": 0.26,
+          "endTime": 0.133,
           "startFrame": 0,
-          "endFrame": 7,
-          "duration": 0.26,
+          "endFrame": 4,
+          "duration": 0.133,
           "wordIndex": 0
         },
         {
-          "char": "説",
-          "startTime": 0.26,
-          "endTime": 0.36,
-          "startFrame": 7,
-          "endFrame": 10,
-          "duration": 0.1,
-          "wordIndex": 1
-        },
-        {
-          "char": "の",
-          "startTime": 0.36,
-          "endTime": 0.68,
-          "startFrame": 10,
-          "endFrame": 20,
-          "duration": 0.32,
-          "wordIndex": 2
-        },
-        {
-          "char": "プ",
-          "startTime": 0.68,
-          "endTime": 0.96,
-          "startFrame": 20,
-          "endFrame": 28,
-          "duration": 0.28,
-          "wordIndex": 3
-        },
-        {
-          "char": "ロ",
-          "startTime": 0.96,
-          "endTime": 0.96,
-          "startFrame": 28,
-          "endFrame": 28,
-          "duration": 0.0,
-          "wordIndex": 4
-        },
-        {
-          "char": "デ",
-          "startTime": 0.96,
-          "endTime": 0.96,
-          "startFrame": 28,
-          "endFrame": 28,
-          "duration": 0.0,
-          "wordIndex": 5
-        },
-        {
-          "char": "ュ",
-          "startTime": 0.96,
-          "endTime": 0.96,
-          "startFrame": 28,
-          "endFrame": 28,
-          "duration": 0.0,
-          "wordIndex": 6
-        },
-        {
-          "char": "ー",
-          "startTime": 0.96,
-          "endTime": 0.96,
-          "startFrame": 28,
-          "endFrame": 28,
-          "duration": 0.0,
-          "wordIndex": 7
-        },
-        {
-          "char": "サ",
-          "startTime": 0.96,
-          "endTime": 1.1,
-          "startFrame": 28,
-          "endFrame": 33,
-          "duration": 0.14,
-          "wordIndex": 8
-        },
-        {
-          "char": "ー",
-          "startTime": 1.1,
-          "endTime": 1.34,
-          "startFrame": 33,
-          "endFrame": 40,
-          "duration": 0.24,
-          "wordIndex": 9
-        },
-        {
-          "char": "出",
-          "startTime": 1.34,
-          "endTime": 1.48,
-          "startFrame": 40,
-          "endFrame": 44,
-          "duration": 0.14,
-          "wordIndex": 10
-        },
-        {
-          "char": "口",
-          "startTime": 1.48,
-          "endTime": 1.6,
-          "startFrame": 44,
-          "endFrame": 48,
-          "duration": 0.12,
-          "wordIndex": 11
-        },
-        {
-          "char": "氏",
-          "startTime": 1.6,
-          "endTime": 1.78,
-          "startFrame": 48,
-          "endFrame": 53,
-          "duration": 0.18,
-          "wordIndex": 12
-        },
-        {
-          "char": "に",
-          "startTime": 1.78,
-          "endTime": 2.06,
-          "startFrame": 53,
-          "endFrame": 61,
-          "duration": 0.28,
-          "wordIndex": 13
-        },
-        {
-          "char": "よ",
-          "startTime": 2.06,
-          "endTime": 2.06,
-          "startFrame": 61,
-          "endFrame": 61,
-          "duration": 0.0,
-          "wordIndex": 14
-        },
-        {
-          "char": "る",
-          "startTime": 2.06,
-          "endTime": 2.32,
-          "startFrame": 61,
-          "endFrame": 69,
-          "duration": 0.26,
-          "wordIndex": 15
-        }
-      ],
-      "style": {
-        "type": "emphasis",
-        "animation": "fadeInScale",
-        "fontSize": 75,
-        "fontWeight": "bold",
-        "color": "#FFFFFF",
-        "textShadow": "0px 0px 10px rgba(230,255,0,0.8), 0px 0px 30px rgba(230,255,0,0.5)",
-        "position": "center"
-      },
-      "metadata": {
-        "isKeyPhrase": true,
-        "characterCount": 16,
-        "segmentationVersion": "3.2"
-      }
-    },
-    {
-      "id": "sub_001",
-      "text": "直接審査未来のKPOPスター",
-      "startTime": 2.32,
-      "endTime": 5.02,
-      "startFrame": 69,
-      "endFrame": 149,
-      "duration": 2.6999999999999997,
-      "characterCount": 14,
-      "characters": [
-        {
-          "char": "直",
-          "startTime": 2.32,
-          "endTime": 2.55,
-          "startFrame": 69,
-          "endFrame": 76,
-          "duration": 0.23,
-          "wordIndex": 16
-        },
-        {
-          "char": "接",
-          "startTime": 2.55,
-          "endTime": 2.78,
-          "startFrame": 76,
-          "endFrame": 83,
-          "duration": 0.23,
-          "wordIndex": 17
-        },
-        {
-          "char": "審",
-          "startTime": 2.78,
-          "endTime": 3.14,
-          "startFrame": 83,
-          "endFrame": 94,
-          "duration": 0.36,
-          "wordIndex": 18
-        },
-        {
-          "char": "査",
-          "startTime": 3.14,
-          "endTime": 3.22,
-          "startFrame": 94,
-          "endFrame": 96,
-          "duration": 0.08,
-          "wordIndex": 19
-        },
-        {
-          "char": "未",
-          "startTime": 3.66,
-          "endTime": 4.06,
-          "startFrame": 109,
-          "endFrame": 121,
-          "duration": 0.4,
-          "wordIndex": 20
-        },
-        {
-          "char": "来",
-          "startTime": 4.06,
-          "endTime": 4.18,
-          "startFrame": 121,
-          "endFrame": 125,
-          "duration": 0.12,
-          "wordIndex": 21
-        },
-        {
-          "char": "の",
-          "startTime": 4.18,
-          "endTime": 4.4,
-          "startFrame": 125,
-          "endFrame": 132,
-          "duration": 0.22,
-          "wordIndex": 22
-        },
-        {
-          "char": "K",
-          "startTime": 4.4,
-          "endTime": 4.58,
-          "startFrame": 132,
-          "endFrame": 137,
-          "duration": 0.18,
-          "wordIndex": 23
-        },
-        {
-          "char": "P",
-          "startTime": 4.7,
-          "endTime": 4.7,
-          "startFrame": 140,
-          "endFrame": 140,
-          "duration": 0.0,
-          "wordIndex": 24
-        },
-        {
-          "char": "O",
-          "startTime": 4.7,
-          "endTime": 4.75,
-          "startFrame": 140,
-          "endFrame": 142,
-          "duration": 0.05,
-          "wordIndex": 25
-        },
-        {
-          "char": "P",
-          "startTime": 4.75,
-          "endTime": 4.8,
-          "startFrame": 142,
-          "endFrame": 144,
-          "duration": 0.05,
-          "wordIndex": 26
+          "char": "ン",
+          "startTime": 0.133,
+          "endTime": 0.267,
+          "startFrame": 4,
+          "endFrame": 8,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
           "char": "ス",
-          "startTime": 4.8,
-          "endTime": 5.02,
-          "startFrame": 144,
-          "endFrame": 150,
-          "duration": 0.22,
-          "wordIndex": 27
+          "startTime": 0.267,
+          "endTime": 0.4,
+          "startFrame": 8,
+          "endFrame": 12,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "タ",
-          "startTime": 5.02,
-          "endTime": 5.02,
-          "startFrame": 150,
-          "endFrame": 150,
-          "duration": 0.0,
-          "wordIndex": 28
+          "char": "未",
+          "startTime": 0.4,
+          "endTime": 0.533,
+          "startFrame": 12,
+          "endFrame": 16,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "ー",
-          "startTime": 5.02,
-          "endTime": 5.02,
-          "startFrame": 150,
-          "endFrame": 150,
-          "duration": 0.0,
-          "wordIndex": 29
-        }
-      ],
-      "style": {
-        "type": "normal",
-        "animation": "fadeIn",
-        "fontSize": 75,
-        "fontWeight": "bold",
-        "color": "#FFFFFF",
-        "textShadow": "0px 0px 10px rgba(230,255,0,0.8), 0px 0px 30px rgba(230,255,0,0.5)",
-        "position": "center"
-      },
-      "metadata": {
-        "isKeyPhrase": false,
-        "characterCount": 14,
-        "segmentationVersion": "3.2"
-      }
-    },
-    {
-      "id": "sub_002",
-      "text": "を発掘するリアルオーディション残さ",
-      "startTime": 5.02,
-      "endTime": 7.96,
-      "startFrame": 150,
-      "endFrame": 237,
-      "duration": 2.9400000000000004,
-      "characterCount": 17,
-      "characters": [
-        {
-          "char": "を",
-          "startTime": 5.02,
-          "endTime": 5.46,
-          "startFrame": 150,
-          "endFrame": 163,
-          "duration": 0.44,
-          "wordIndex": 30
+          "char": "経",
+          "startTime": 0.533,
+          "endTime": 0.667,
+          "startFrame": 16,
+          "endFrame": 20,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "発",
-          "startTime": 5.46,
-          "endTime": 5.46,
-          "startFrame": 163,
-          "endFrame": 163,
-          "duration": 0.0,
-          "wordIndex": 31
+          "char": "験",
+          "startTime": 0.667,
+          "endTime": 0.8,
+          "startFrame": 20,
+          "endFrame": 24,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "掘",
-          "startTime": 5.46,
-          "endTime": 5.54,
-          "startFrame": 163,
-          "endFrame": 166,
-          "duration": 0.08,
-          "wordIndex": 32
+          "char": "で",
+          "startTime": 0.8,
+          "endTime": 0.933,
+          "startFrame": 24,
+          "endFrame": 28,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "す",
-          "startTime": 5.54,
-          "endTime": 5.69,
-          "startFrame": 166,
-          "endFrame": 170,
-          "duration": 0.15,
-          "wordIndex": 33
+          "char": "も",
+          "startTime": 0.933,
+          "endTime": 1.1,
+          "startFrame": 28,
+          "endFrame": 33,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "世",
+          "startTime": 1.1,
+          "endTime": 1.233,
+          "startFrame": 33,
+          "endFrame": 37,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "界",
+          "startTime": 1.233,
+          "endTime": 1.367,
+          "startFrame": 37,
+          "endFrame": 41,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "へ",
+          "startTime": 1.367,
+          "endTime": 1.5,
+          "startFrame": 41,
+          "endFrame": 45,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "行",
+          "startTime": 1.5,
+          "endTime": 1.633,
+          "startFrame": 45,
+          "endFrame": 49,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "け",
+          "startTime": 1.633,
+          "endTime": 1.767,
+          "startFrame": 49,
+          "endFrame": 53,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
           "char": "る",
-          "startTime": 5.69,
-          "endTime": 5.84,
-          "startFrame": 170,
-          "endFrame": 175,
-          "duration": 0.15,
-          "wordIndex": 34
-        },
-        {
-          "char": "リ",
-          "startTime": 5.84,
-          "endTime": 6.12,
-          "startFrame": 175,
-          "endFrame": 183,
-          "duration": 0.28,
-          "wordIndex": 35
-        },
-        {
-          "char": "ア",
-          "startTime": 6.12,
-          "endTime": 6.12,
-          "startFrame": 183,
-          "endFrame": 183,
-          "duration": 0.0,
-          "wordIndex": 36
-        },
-        {
-          "char": "ル",
-          "startTime": 6.12,
-          "endTime": 6.32,
-          "startFrame": 183,
-          "endFrame": 189,
-          "duration": 0.2,
-          "wordIndex": 37
-        },
-        {
-          "char": "オ",
-          "startTime": 6.32,
-          "endTime": 6.48,
-          "startFrame": 189,
-          "endFrame": 194,
-          "duration": 0.16,
-          "wordIndex": 38
-        },
-        {
-          "char": "ー",
-          "startTime": 6.48,
-          "endTime": 6.48,
-          "startFrame": 194,
-          "endFrame": 194,
-          "duration": 0.0,
-          "wordIndex": 39
-        },
-        {
-          "char": "デ",
-          "startTime": 6.48,
-          "endTime": 6.48,
-          "startFrame": 194,
-          "endFrame": 194,
-          "duration": 0.0,
-          "wordIndex": 40
-        },
-        {
-          "char": "ィ",
-          "startTime": 6.48,
-          "endTime": 6.54,
-          "startFrame": 194,
-          "endFrame": 196,
-          "duration": 0.06,
-          "wordIndex": 41
-        },
-        {
-          "char": "シ",
-          "startTime": 6.54,
-          "endTime": 6.54,
-          "startFrame": 196,
-          "endFrame": 196,
-          "duration": 0.0,
-          "wordIndex": 42
-        },
-        {
-          "char": "ョ",
-          "startTime": 6.54,
-          "endTime": 6.54,
-          "startFrame": 196,
-          "endFrame": 196,
-          "duration": 0.0,
-          "wordIndex": 43
-        },
-        {
-          "char": "ン",
-          "startTime": 6.54,
-          "endTime": 7.56,
-          "startFrame": 196,
-          "endFrame": 226,
-          "duration": 1.02,
-          "wordIndex": 44
-        },
-        {
-          "char": "残",
-          "startTime": 7.56,
-          "endTime": 7.76,
-          "startFrame": 226,
-          "endFrame": 232,
-          "duration": 0.2,
-          "wordIndex": 45
-        },
-        {
-          "char": "さ",
-          "startTime": 7.76,
-          "endTime": 7.96,
-          "startFrame": 232,
-          "endFrame": 238,
-          "duration": 0.2,
-          "wordIndex": 46
+          "startTime": 1.767,
+          "endTime": 1.9,
+          "startFrame": 53,
+          "endFrame": 57,
+          "duration": 0.133,
+          "wordIndex": 0
         }
       ],
-      "style": {
-        "type": "normal",
-        "animation": "fadeIn",
-        "fontSize": 75,
-        "fontWeight": "bold",
-        "color": "#FFFFFF",
-        "textShadow": "0px 0px 10px rgba(230,255,0,0.8), 0px 0px 30px rgba(230,255,0,0.5)",
-        "position": "center"
-      },
+      "duration": 1.912,
+      "characterCount": 14,
       "metadata": {
-        "isKeyPhrase": false,
-        "characterCount": 17,
-        "segmentationVersion": "3.2"
+        "isKeyPhrase": true,
+        "characterCount": 14
       }
     },
     {
-      "id": "sub_003",
-      "text": "れた席はあとわずか今すぐ公",
-      "startTime": 7.96,
-      "endTime": 11.12,
-      "startFrame": 238,
-      "endFrame": 332,
-      "duration": 3.1599999999999993,
-      "characterCount": 13,
+      "id": "line-2",
+      "text": "。条件はただひとつ",
+      "startFrame": 79,
+      "endFrame": 115,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
       "characters": [
         {
-          "char": "れ",
-          "startTime": 7.96,
-          "endTime": 8.02,
-          "startFrame": 238,
-          "endFrame": 240,
-          "duration": 0.06,
-          "wordIndex": 47
+          "char": "。",
+          "startTime": 2.633,
+          "endTime": 2.767,
+          "startFrame": 79,
+          "endFrame": 83,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "た",
-          "startTime": 8.02,
-          "endTime": 8.08,
-          "startFrame": 240,
-          "endFrame": 242,
-          "duration": 0.06,
-          "wordIndex": 48
+          "char": "条",
+          "startTime": 2.767,
+          "endTime": 2.9,
+          "startFrame": 83,
+          "endFrame": 87,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "席",
-          "startTime": 8.08,
-          "endTime": 8.28,
-          "startFrame": 242,
-          "endFrame": 248,
-          "duration": 0.2,
-          "wordIndex": 49
+          "char": "件",
+          "startTime": 2.9,
+          "endTime": 3.033,
+          "startFrame": 87,
+          "endFrame": 91,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
           "char": "は",
-          "startTime": 8.28,
-          "endTime": 8.62,
-          "startFrame": 248,
-          "endFrame": 258,
-          "duration": 0.34,
-          "wordIndex": 50
+          "startTime": 3.033,
+          "endTime": 3.167,
+          "startFrame": 91,
+          "endFrame": 95,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "あ",
-          "startTime": 8.62,
-          "endTime": 8.76,
-          "startFrame": 258,
-          "endFrame": 262,
-          "duration": 0.14,
-          "wordIndex": 51
+          "char": "た",
+          "startTime": 3.167,
+          "endTime": 3.3,
+          "startFrame": 95,
+          "endFrame": 99,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "だ",
+          "startTime": 3.3,
+          "endTime": 3.433,
+          "startFrame": 99,
+          "endFrame": 103,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "ひ",
+          "startTime": 3.433,
+          "endTime": 3.567,
+          "startFrame": 103,
+          "endFrame": 107,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
           "char": "と",
-          "startTime": 8.76,
-          "endTime": 8.9,
-          "startFrame": 262,
-          "endFrame": 266,
-          "duration": 0.14,
-          "wordIndex": 52
+          "startTime": 3.567,
+          "endTime": 3.7,
+          "startFrame": 107,
+          "endFrame": 111,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "わ",
-          "startTime": 8.9,
-          "endTime": 9.06,
-          "startFrame": 266,
-          "endFrame": 271,
-          "duration": 0.16,
-          "wordIndex": 53
-        },
-        {
-          "char": "ず",
-          "startTime": 9.06,
-          "endTime": 9.14,
-          "startFrame": 271,
-          "endFrame": 274,
-          "duration": 0.08,
-          "wordIndex": 54
-        },
-        {
-          "char": "か",
-          "startTime": 9.14,
-          "endTime": 10.2,
-          "startFrame": 274,
-          "endFrame": 305,
-          "duration": 1.06,
-          "wordIndex": 55
-        },
-        {
-          "char": "今",
-          "startTime": 10.22,
-          "endTime": 10.62,
-          "startFrame": 306,
-          "endFrame": 318,
-          "duration": 0.4,
-          "wordIndex": 56
-        },
-        {
-          "char": "す",
-          "startTime": 10.62,
-          "endTime": 10.7,
-          "startFrame": 318,
-          "endFrame": 320,
-          "duration": 0.08,
-          "wordIndex": 57
-        },
-        {
-          "char": "ぐ",
-          "startTime": 10.7,
-          "endTime": 10.8,
-          "startFrame": 320,
-          "endFrame": 324,
-          "duration": 0.1,
-          "wordIndex": 58
-        },
-        {
-          "char": "公",
-          "startTime": 10.8,
-          "endTime": 11.12,
-          "startFrame": 324,
-          "endFrame": 333,
-          "duration": 0.32,
-          "wordIndex": 59
+          "char": "つ",
+          "startTime": 3.7,
+          "endTime": 3.833,
+          "startFrame": 111,
+          "endFrame": 115,
+          "duration": 0.133,
+          "wordIndex": 0
         }
       ],
-      "style": {
-        "type": "cta",
-        "animation": "fadeInScale",
-        "fontSize": 75,
-        "fontWeight": "bold",
-        "color": "#FFFFFF",
-        "textShadow": "0px 0px 10px rgba(230,255,0,0.8), 0px 0px 30px rgba(230,255,0,0.5)",
-        "position": "center"
-      },
+      "duration": 1.182,
+      "characterCount": 9,
       "metadata": {
         "isKeyPhrase": true,
-        "characterCount": 13,
-        "segmentationVersion": "3.2"
+        "characterCount": 9
       }
     },
     {
-      "id": "sub_004",
-      "text": "式LINEからエントリーせよ",
-      "startTime": 11.12,
-      "endTime": 12.74,
-      "startFrame": 333,
-      "endFrame": 381,
-      "duration": 1.620000000000001,
-      "characterCount": 14,
+      "id": "line-3",
+      "text": "、十ヶ月間毎日鏡の前に立つこと。才能",
+      "startFrame": 133,
+      "endFrame": 208,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
       "characters": [
         {
-          "char": "式",
-          "startTime": 11.12,
-          "endTime": 11.26,
-          "startFrame": 333,
-          "endFrame": 337,
-          "duration": 0.14,
-          "wordIndex": 60
+          "char": "、",
+          "startTime": 4.433,
+          "endTime": 4.567,
+          "startFrame": 133,
+          "endFrame": 137,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "L",
-          "startTime": 11.26,
-          "endTime": 11.5,
-          "startFrame": 337,
-          "endFrame": 345,
-          "duration": 0.24,
-          "wordIndex": 61
+          "char": "十",
+          "startTime": 4.567,
+          "endTime": 4.7,
+          "startFrame": 137,
+          "endFrame": 141,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "I",
-          "startTime": 11.5,
-          "endTime": 11.5067,
-          "startFrame": 345,
-          "endFrame": 345,
-          "duration": 0.0067,
-          "wordIndex": 62
+          "char": "ヶ",
+          "startTime": 4.7,
+          "endTime": 4.833,
+          "startFrame": 141,
+          "endFrame": 145,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "N",
-          "startTime": 11.5067,
-          "endTime": 11.5133,
-          "startFrame": 345,
-          "endFrame": 345,
-          "duration": 0.0067,
-          "wordIndex": 63
+          "char": "月",
+          "startTime": 4.833,
+          "endTime": 5.0,
+          "startFrame": 145,
+          "endFrame": 150,
+          "duration": 0.167,
+          "wordIndex": 0
         },
         {
-          "char": "E",
-          "startTime": 11.5133,
-          "endTime": 11.52,
-          "startFrame": 345,
-          "endFrame": 345,
-          "duration": 0.0067,
-          "wordIndex": 64
+          "char": "間",
+          "startTime": 5.0,
+          "endTime": 5.133,
+          "startFrame": 150,
+          "endFrame": 154,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "か",
-          "startTime": 11.52,
-          "endTime": 11.72,
-          "startFrame": 345,
-          "endFrame": 351,
-          "duration": 0.2,
-          "wordIndex": 65
+          "char": "毎",
+          "startTime": 5.133,
+          "endTime": 5.267,
+          "startFrame": 154,
+          "endFrame": 158,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "日",
+          "startTime": 5.267,
+          "endTime": 5.4,
+          "startFrame": 158,
+          "endFrame": 162,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "鏡",
+          "startTime": 5.4,
+          "endTime": 5.533,
+          "startFrame": 162,
+          "endFrame": 166,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "の",
+          "startTime": 5.533,
+          "endTime": 5.7,
+          "startFrame": 166,
+          "endFrame": 171,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "前",
+          "startTime": 5.7,
+          "endTime": 5.833,
+          "startFrame": 171,
+          "endFrame": 175,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "に",
+          "startTime": 5.833,
+          "endTime": 5.967,
+          "startFrame": 175,
+          "endFrame": 179,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "立",
+          "startTime": 5.967,
+          "endTime": 6.1,
+          "startFrame": 179,
+          "endFrame": 183,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "つ",
+          "startTime": 6.1,
+          "endTime": 6.233,
+          "startFrame": 183,
+          "endFrame": 187,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "こ",
+          "startTime": 6.233,
+          "endTime": 6.367,
+          "startFrame": 187,
+          "endFrame": 191,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "と",
+          "startTime": 6.367,
+          "endTime": 6.5,
+          "startFrame": 191,
+          "endFrame": 195,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 6.5,
+          "endTime": 6.667,
+          "startFrame": 195,
+          "endFrame": 200,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "才",
+          "startTime": 6.667,
+          "endTime": 6.8,
+          "startFrame": 200,
+          "endFrame": 204,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "能",
+          "startTime": 6.8,
+          "endTime": 6.933,
+          "startFrame": 204,
+          "endFrame": 208,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 2.504,
+      "characterCount": 18,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 18
+      }
+    },
+    {
+      "id": "line-4",
+      "text": "は言い訳にならない。本",
+      "startFrame": 232,
+      "endFrame": 277,
+      "style": {
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
+        "color": "#FFFFFF",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
+      },
+      "characters": [
+        {
+          "char": "は",
+          "startTime": 7.733,
+          "endTime": 7.867,
+          "startFrame": 232,
+          "endFrame": 236,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "言",
+          "startTime": 7.867,
+          "endTime": 8.0,
+          "startFrame": 236,
+          "endFrame": 240,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "い",
+          "startTime": 8.0,
+          "endTime": 8.133,
+          "startFrame": 240,
+          "endFrame": 244,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "訳",
+          "startTime": 8.133,
+          "endTime": 8.267,
+          "startFrame": 244,
+          "endFrame": 248,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "に",
+          "startTime": 8.267,
+          "endTime": 8.4,
+          "startFrame": 248,
+          "endFrame": 252,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "な",
+          "startTime": 8.4,
+          "endTime": 8.567,
+          "startFrame": 252,
+          "endFrame": 257,
+          "duration": 0.167,
+          "wordIndex": 0
         },
         {
           "char": "ら",
-          "startTime": 11.72,
-          "endTime": 11.92,
-          "startFrame": 351,
-          "endFrame": 357,
-          "duration": 0.2,
-          "wordIndex": 66
+          "startTime": 8.567,
+          "endTime": 8.7,
+          "startFrame": 257,
+          "endFrame": 261,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "エ",
-          "startTime": 11.92,
-          "endTime": 12.22,
-          "startFrame": 357,
-          "endFrame": 366,
-          "duration": 0.3,
-          "wordIndex": 67
+          "char": "な",
+          "startTime": 8.7,
+          "endTime": 8.833,
+          "startFrame": 261,
+          "endFrame": 265,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "ン",
-          "startTime": 12.22,
-          "endTime": 12.24,
-          "startFrame": 366,
-          "endFrame": 367,
-          "duration": 0.02,
-          "wordIndex": 68
+          "char": "い",
+          "startTime": 8.833,
+          "endTime": 8.967,
+          "startFrame": 265,
+          "endFrame": 269,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "ト",
-          "startTime": 12.24,
-          "endTime": 12.26,
-          "startFrame": 367,
-          "endFrame": 367,
-          "duration": 0.02,
-          "wordIndex": 69
+          "char": "。",
+          "startTime": 8.967,
+          "endTime": 9.1,
+          "startFrame": 269,
+          "endFrame": 273,
+          "duration": 0.133,
+          "wordIndex": 0
         },
         {
-          "char": "リ",
-          "startTime": 12.26,
-          "endTime": 12.36,
-          "startFrame": 367,
-          "endFrame": 370,
-          "duration": 0.1,
-          "wordIndex": 70
-        },
-        {
-          "char": "ー",
-          "startTime": 12.36,
-          "endTime": 12.5,
-          "startFrame": 370,
-          "endFrame": 375,
-          "duration": 0.14,
-          "wordIndex": 71
-        },
-        {
-          "char": "せ",
-          "startTime": 12.5,
-          "endTime": 12.64,
-          "startFrame": 375,
-          "endFrame": 379,
-          "duration": 0.14,
-          "wordIndex": 72
-        },
-        {
-          "char": "よ",
-          "startTime": 12.64,
-          "endTime": 12.74,
-          "startFrame": 379,
-          "endFrame": 382,
-          "duration": 0.1,
-          "wordIndex": 73
+          "char": "本",
+          "startTime": 9.1,
+          "endTime": 9.233,
+          "startFrame": 273,
+          "endFrame": 277,
+          "duration": 0.133,
+          "wordIndex": 0
         }
       ],
+      "duration": 1.483,
+      "characterCount": 11,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 11
+      }
+    },
+    {
+      "id": "line-5",
+      "text": "気の覚悟だけが君を変える。",
+      "startFrame": 298,
+      "endFrame": 352,
       "style": {
-        "type": "cta",
-        "animation": "fadeInScale",
-        "fontSize": 75,
-        "fontWeight": "bold",
+        "animation": "karaoke",
+        "type": "highlight",
+        "fontFamily": "Impact",
+        "fontSize": 48,
         "color": "#FFFFFF",
-        "textShadow": "0px 0px 10px rgba(230,255,0,0.8), 0px 0px 30px rgba(230,255,0,0.5)",
-        "position": "center"
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.15
       },
+      "characters": [
+        {
+          "char": "気",
+          "startTime": 9.933,
+          "endTime": 10.067,
+          "startFrame": 298,
+          "endFrame": 302,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "の",
+          "startTime": 10.067,
+          "endTime": 10.2,
+          "startFrame": 302,
+          "endFrame": 306,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "覚",
+          "startTime": 10.2,
+          "endTime": 10.333,
+          "startFrame": 306,
+          "endFrame": 310,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "悟",
+          "startTime": 10.333,
+          "endTime": 10.5,
+          "startFrame": 310,
+          "endFrame": 315,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "だ",
+          "startTime": 10.5,
+          "endTime": 10.633,
+          "startFrame": 315,
+          "endFrame": 319,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "け",
+          "startTime": 10.633,
+          "endTime": 10.767,
+          "startFrame": 319,
+          "endFrame": 323,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "が",
+          "startTime": 10.767,
+          "endTime": 10.9,
+          "startFrame": 323,
+          "endFrame": 327,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "君",
+          "startTime": 10.9,
+          "endTime": 11.033,
+          "startFrame": 327,
+          "endFrame": 331,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "を",
+          "startTime": 11.033,
+          "endTime": 11.167,
+          "startFrame": 331,
+          "endFrame": 335,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "変",
+          "startTime": 11.167,
+          "endTime": 11.333,
+          "startFrame": 335,
+          "endFrame": 340,
+          "duration": 0.167,
+          "wordIndex": 0
+        },
+        {
+          "char": "え",
+          "startTime": 11.333,
+          "endTime": 11.467,
+          "startFrame": 340,
+          "endFrame": 344,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "る",
+          "startTime": 11.467,
+          "endTime": 11.6,
+          "startFrame": 344,
+          "endFrame": 348,
+          "duration": 0.133,
+          "wordIndex": 0
+        },
+        {
+          "char": "。",
+          "startTime": 11.6,
+          "endTime": 11.733,
+          "startFrame": 348,
+          "endFrame": 352,
+          "duration": 0.133,
+          "wordIndex": 0
+        }
+      ],
+      "duration": 1.791,
+      "characterCount": 13,
+      "metadata": {
+        "isKeyPhrase": true,
+        "characterCount": 13
+      }
+    },
+    {
+      "id": "cta",
+      "text": "伝説のP出口氏が\n審査！\nリアルオーディション\n開催\n詳細はプロフの\nLINEから",
+      "startFrame": 360,
+      "endFrame": 420,
+      "style": {
+        "animation": "fadeInScale",
+        "type": "cta",
+        "fontFamily": "Noto Sans JP",
+        "fontSize": 42,
+        "color": "#FFFACD",
+        "highlightColor": "#FFD700",
+        "scaleFactor": 1.0
+      },
+      "characters": [],
+      "duration": 2.0,
+      "characterCount": 41,
       "metadata": {
         "isKeyPhrase": false,
-        "characterCount": 14,
-        "segmentationVersion": "3.2"
+        "characterCount": 41
       }
     }
   ],
   "analytics": {
-    "totalWords": 63,
-    "averageWordDuration": 0.195,
-    "speechRate": 4.85,
-    "pauseCount": 1,
-    "longestPause": 0.44,
-    "shortestPause": 0.44
+    "totalWords": 5,
+    "averageWordDuration": 0.185,
+    "speechRate": 325,
+    "pauseCount": 4,
+    "longestPause": 0.3
   }
 }
