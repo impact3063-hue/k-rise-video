@@ -62,16 +62,12 @@ jobs:
           path: output.mp4
       
       - name: Notify Discord - Rendering Complete
+        if: always()
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          curl -X POST "$DISCORD_WEBHOOK_URL" \
+          curl -X POST "${DISCORD_WEBHOOK_URL}" \
             -H "Content-Type: application/json" \
-            -d '{
-              "content": "✅ **動画レンダリング完了**\n\n🎬 **プロジェクト**: K-RISE TikTok 3\n⏱️ **レンダリング時間**: 約54秒\n📦 **出力**: output.mp4\n\n💡 動画は GitHub Actions の Artifacts からダウンロードできます\n🔗 **ワークフロー**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}",
-              "username": "K-RISE Rendering Bot",
-              "avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png"
-            }'
+            -d "{\"content\": \"✅ **動画レンダリング完了**\\n\\n🎬 **プロジェクト**: K-RISE TikTok 3\\n⏱️ **レンダリング時間**: 約54秒\\n📦 **出力**: output.mp4\\n\\n💡 動画は GitHub Actions の Artifacts からダウンロードできます\\n🔗 **ワークフロー**: ${WORKFLOW_URL}\", \"username\": \"K-RISE Rendering Bot\", \"avatar_url\": \"https://cdn.discordapp.com/embed/avatars/0.png\"}"
           echo "✅ Discord notification sent"
-          echo "Timestamp: ${{ github.event.client_payload.timestamp }}"
-          echo "Source: ${{ github.event.client_payload.source }}"
