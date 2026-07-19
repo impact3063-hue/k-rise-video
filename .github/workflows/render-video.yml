@@ -63,14 +63,5 @@ jobs:
       
       - name: Notify Discord - Rendering Complete
         if: always()
-        env:
-          RAW_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          # 不要な空白やダブルクォーテーションを完全に除去
-          CLEAN_URL=$(echo "$RAW_WEBHOOK_URL" | sed -e 's/"//g' -e 's/ //g' -e 's/\r//g' -e 's/\n//g')
-          
-          curl -X POST "$CLEAN_URL" \
-            -H "Content-Type: application/json" \
-            -d '{"content": "🎬 **【K-RISE完全開通】動画のレンダリングが完了しました！**\n\n✅ 成果物はArtifactsからダウンロード可能です。", "username": "K-RISE Rendering Bot", "avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png"}'
-          echo "✅ Discord notification sent"
+          curl -X POST -H "Content-Type: application/json" -d '{"content": "🎬 【K-RISE完全開通】動画のレンダリングが完了しました！成果物はArtifactsからダウンロード可能です。"}' ${{ secrets.DISCORD_WEBHOOK_URL }}
