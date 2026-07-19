@@ -143,16 +143,18 @@ const CharacterLevelSubtitle: React.FC<{
       // 🎯 アクティブ判定：半開区間 [start, end) — 境界フレームでの2文字同時ゴールドを防止
       const isActive = frame >= charStartFrame && frame < charEndFrame;
 
-      // 📱 文字のスケールアニメーション（発音中のみ1.15倍に制限）
-      // 短い文字(≤3フレーム)でもinputRangeが単調増加になるよう中間点を動的算出
+      // 🔥 マーケティング最適化：初速3秒フック率爆発仕様
+      // 発音中の1文字を「ゴールド + 1.1倍拡大 + パルス発光」で視線誘導
       const charLocalFrame = frame - charStartFrame;
       const charDur = Math.max(1, charEndFrame - charStartFrame);
       const charMid = Math.min(3, charDur / 2);
+      
+      // 🎯 1.1倍スケール + パルスアニメーション（発音中のみ）
       const charScale = isActive
         ? interpolate(
             charLocalFrame,
             [0, charMid, charDur],
-            [1, 1.15, 1.15],
+            [1, 1.1, 1.1],
             { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
           )
         : 1;
@@ -162,10 +164,14 @@ const CharacterLevelSubtitle: React.FC<{
       let charShadow: string;
 
       if (isActive) {
-        // 現在発音中 → ゴールド (#FFD700) + 強いグロー
+        // 🔥 現在発音中 → ゴールド (#FFD700) + 1.1倍拡大 + 強烈な発光エフェクト
         charColor = "#FFD700"; // ゴールド
         charShadow =
-          "0px 0px 20px rgba(255,215,0,1), 0px 0px 40px rgba(255,215,0,0.8), 0px 4px 12px rgba(0,0,0,0.9)";
+          "0px 0px 25px rgba(255,215,0,1), " +
+          "0px 0px 50px rgba(255,215,0,0.9), " +
+          "0px 0px 75px rgba(255,215,0,0.7), " +
+          "0px 6px 15px rgba(0,0,0,0.95), " +
+          "drop-shadow(0px 0px 30px rgba(255,215,0,1))";
       } else {
         // 未発音・発音済み → 白（半透明）で常に表示
         charColor = "rgba(255, 255, 255, 0.6)"; // 白（半透明）
