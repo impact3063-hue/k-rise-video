@@ -64,10 +64,13 @@ jobs:
       - name: Notify Discord - Rendering Complete
         if: always()
         env:
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          RAW_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          curl -X POST "${DISCORD_WEBHOOK_URL}" \
+          # 不要な空白やダブルクォーテーションを完全に除去
+          CLEAN_URL=$(echo "$RAW_WEBHOOK_URL" | sed -e 's/"//g' -e 's/ //g' -e 's/\r//g' -e 's/\n//g')
+          
+          curl -X POST "$CLEAN_URL" \
             -H "Content-Type: application/json" \
-            -d "{\"content\": \"✅ **動画レンダリング完了**\\n\\n🎬 **プロジェクト**: K-RISE TikTok 3\\n⏱️ **レンダリング時間**: 約54秒\\n📦 **出力**: output.mp4\\n\\n💡 動画は GitHub Actions の Artifacts からダウンロードできます\\n🔗 **ワークフロー**: ${WORKFLOW_URL}\", \"username\": \"K-RISE Rendering Bot\", \"avatar_url\": \"https://cdn.discordapp.com/embed/avatars/0.png\"}"
+            -d '{"content": "🎬 **【K-RISE完全開通】動画のレンダリングが完了しました！**\n\n✅ 成果物はArtifactsからダウンロード可能です。", "username": "K-RISE Rendering Bot", "avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png"}'
           echo "✅ Discord notification sent"
