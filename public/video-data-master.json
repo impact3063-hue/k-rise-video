@@ -1,8 +1,8 @@
 {
-  "version": "7.0.0-minimal",
+  "version": "8.0.0-character-sync",
   "metadata": {
     "projectId": "K-RISE-TikTok-3",
-    "title": "K-RISE Dance Project - Minimal Hardcoded",
+    "title": "K-RISE Dance Project - Character-Level Sync",
     "fps": 30,
     "duration": 14.0,
     "totalFrames": 420
@@ -26,7 +26,30 @@
       "text": "伝説のプロデューサー\n出口氏による直接審査",
       "style": {
         "type": "highlight"
-      }
+      },
+      "characters": [
+        {"char": "伝", "startFrame": 0, "endFrame": 6},
+        {"char": "説", "startFrame": 6, "endFrame": 12},
+        {"char": "の", "startFrame": 12, "endFrame": 15},
+        {"char": "プ", "startFrame": 15, "endFrame": 18},
+        {"char": "ロ", "startFrame": 18, "endFrame": 21},
+        {"char": "デ", "startFrame": 21, "endFrame": 24},
+        {"char": "ュ", "startFrame": 24, "endFrame": 27},
+        {"char": "ー", "startFrame": 27, "endFrame": 30},
+        {"char": "サ", "startFrame": 30, "endFrame": 33},
+        {"char": "ー", "startFrame": 33, "endFrame": 36},
+        {"char": "\n", "startFrame": 36, "endFrame": 36},
+        {"char": "出", "startFrame": 36, "endFrame": 42},
+        {"char": "口", "startFrame": 42, "endFrame": 48},
+        {"char": "氏", "startFrame": 48, "endFrame": 54},
+        {"char": "に", "startFrame": 54, "endFrame": 57},
+        {"char": "よ", "startFrame": 57, "endFrame": 60},
+        {"char": "る", "startFrame": 60, "endFrame": 66},
+        {"char": "直", "startFrame": 66, "endFrame": 72},
+        {"char": "接", "startFrame": 72, "endFrame": 78},
+        {"char": "審", "startFrame": 78, "endFrame": 84},
+        {"char": "査", "startFrame": 84, "endFrame": 90}
+      ]
     },
     {
       "id": "seg2",
@@ -35,7 +58,35 @@
       "text": "未来のKPOPスターを発掘する\nリアルオーディション",
       "style": {
         "type": "highlight"
-      }
+      },
+      "characters": [
+        {"char": "未", "startFrame": 90, "endFrame": 96},
+        {"char": "来", "startFrame": 96, "endFrame": 102},
+        {"char": "の", "startFrame": 102, "endFrame": 105},
+        {"char": "K", "startFrame": 105, "endFrame": 108},
+        {"char": "P", "startFrame": 108, "endFrame": 111},
+        {"char": "O", "startFrame": 111, "endFrame": 114},
+        {"char": "P", "startFrame": 114, "endFrame": 117},
+        {"char": "ス", "startFrame": 117, "endFrame": 120},
+        {"char": "タ", "startFrame": 120, "endFrame": 123},
+        {"char": "ー", "startFrame": 123, "endFrame": 126},
+        {"char": "を", "startFrame": 126, "endFrame": 129},
+        {"char": "発", "startFrame": 129, "endFrame": 132},
+        {"char": "掘", "startFrame": 132, "endFrame": 135},
+        {"char": "す", "startFrame": 135, "endFrame": 138},
+        {"char": "る", "startFrame": 138, "endFrame": 141},
+        {"char": "\n", "startFrame": 141, "endFrame": 141},
+        {"char": "リ", "startFrame": 141, "endFrame": 147},
+        {"char": "ア", "startFrame": 147, "endFrame": 153},
+        {"char": "ル", "startFrame": 153, "endFrame": 159},
+        {"char": "オ", "startFrame": 159, "endFrame": 162},
+        {"char": "ー", "startFrame": 162, "endFrame": 165},
+        {"char": "デ", "startFrame": 165, "endFrame": 168},
+        {"char": "ィ", "startFrame": 168, "endFrame": 171},
+        {"char": "シ", "startFrame": 171, "endFrame": 174},
+        {"char": "ョ", "startFrame": 174, "endFrame": 177},
+        {"char": "ン", "startFrame": 177, "endFrame": 180}
+      ]
     },
     {
       "id": "seg3",
@@ -44,7 +95,32 @@
       "text": "残された席はあとわずか\n今すぐ公式LINEから",
       "style": {
         "type": "highlight"
-      }
+      },
+      "characters": [
+        {"char": "残", "startFrame": 180, "endFrame": 186},
+        {"char": "さ", "startFrame": 186, "endFrame": 192},
+        {"char": "れ", "startFrame": 192, "endFrame": 198},
+        {"char": "た", "startFrame": 198, "endFrame": 204},
+        {"char": "席", "startFrame": 204, "endFrame": 210},
+        {"char": "は", "startFrame": 210, "endFrame": 216},
+        {"char": "あ", "startFrame": 216, "endFrame": 222},
+        {"char": "と", "startFrame": 222, "endFrame": 228},
+        {"char": "わ", "startFrame": 228, "endFrame": 234},
+        {"char": "ず", "startFrame": 234, "endFrame": 240},
+        {"char": "か", "startFrame": 240, "endFrame": 246},
+        {"char": "\n", "startFrame": 246, "endFrame": 246},
+        {"char": "今", "startFrame": 246, "endFrame": 258},
+        {"char": "す", "startFrame": 258, "endFrame": 270},
+        {"char": "ぐ", "startFrame": 270, "endFrame": 282},
+        {"char": "公", "startFrame": 282, "endFrame": 288},
+        {"char": "式", "startFrame": 288, "endFrame": 294},
+        {"char": "L", "startFrame": 294, "endFrame": 300},
+        {"char": "I", "startFrame": 300, "endFrame": 306},
+        {"char": "N", "startFrame": 306, "endFrame": 312},
+        {"char": "E", "startFrame": 312, "endFrame": 318},
+        {"char": "か", "startFrame": 318, "endFrame": 324},
+        {"char": "ら", "startFrame": 324, "endFrame": 330}
+      ]
     },
     {
       "id": "seg4",
@@ -53,7 +129,16 @@
       "text": "エントリーせよ",
       "style": {
         "type": "highlight"
-      }
+      },
+      "characters": [
+        {"char": "エ", "startFrame": 330, "endFrame": 345},
+        {"char": "ン", "startFrame": 345, "endFrame": 360},
+        {"char": "ト", "startFrame": 360, "endFrame": 375},
+        {"char": "リ", "startFrame": 375, "endFrame": 390},
+        {"char": "ー", "startFrame": 390, "endFrame": 400},
+        {"char": "せ", "startFrame": 400, "endFrame": 410},
+        {"char": "よ", "startFrame": 410, "endFrame": 420}
+      ]
     }
   ]
 }

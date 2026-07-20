@@ -1,11 +1,11 @@
 /**
- * 🎬 K-RISE TikTok Video 3 - Minimal Hardcoded Segments
- * 完全固定字幕システム - 単語切れ・画面混同の100%強制修正
+ * 🎬 K-RISE TikTok Video 3 - Character-Level Gold Sync Animation
+ * 完全固定字幕システム + 1文字ずつゴールドハイライト演出
  *
  * 特徴:
  * - 完全静的データ駆動：4つの固定セグメントのみ
  * - \n による明示的な改行制御（単語の途中で改行しない）
- * - シンプルなフェードイン/アウトアニメーション
+ * - 1文字ずつゴールドに光り拡大するカラオケアニメーション
  * - 自動折り返し処理を完全廃止
  */
 
@@ -20,6 +20,12 @@ import {
 } from "remotion";
 
 // 型定義
+interface CharacterTiming {
+  char: string;
+  startFrame: number;
+  endFrame: number;
+}
+
 interface SubtitleStyle {
   type: string;
 }
@@ -30,6 +36,7 @@ interface Subtitle {
   startFrame: number;
   endFrame: number;
   style: SubtitleStyle;
+  characters?: CharacterTiming[];
 }
 
 interface VideoData {
@@ -61,10 +68,10 @@ import videoDataMaster from "../public/video-data-master.json";
 const videoData = videoDataMaster as VideoData;
 
 /**
- * 🎯 Simple Subtitle Component (Minimal Version)
- * 完全固定版：\n による明示的な改行のみ使用
+ * 🎯 Character-Level Gold Sync Subtitle Component
+ * 完全固定版：\n による明示的な改行 + 1文字ずつゴールドハイライト
  */
-const SimpleSubtitle: React.FC<{
+const CharacterSyncSubtitle: React.FC<{
   subtitle: Subtitle;
   frame: number;
 }> = ({ subtitle, frame }) => {
@@ -100,10 +107,21 @@ const SimpleSubtitle: React.FC<{
     return subtitle.text.split('\n');
   }, [subtitle.text]);
 
+  // 🎯 文字ごとのタイミング情報を取得
+  const characterTimings = subtitle.characters || [];
+
+  // 各文字が現在アクティブかどうかを判定する関数
+  const isCharacterActive = (charTiming: CharacterTiming): boolean => {
+    return frame >= charTiming.startFrame && frame < charTiming.endFrame;
+  };
+
   // 字幕全体の表示判定
   if (frame < startFrame || frame >= endFrame) {
     return null;
   }
+
+  // 文字インデックスを追跡
+  let charIndex = 0;
 
   return (
     <div
@@ -138,23 +156,54 @@ const SimpleSubtitle: React.FC<{
           <div
             key={`${subtitle.id}-line-${lineIndex}`}
             style={{
-              display: "block",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "nowrap",
+              justifyContent: "center",
+              alignItems: "center",
               width: "100%",
               whiteSpace: "nowrap",
-              fontSize: "clamp(2.4rem, 7vw, 4.5rem)",
-              fontWeight: 900,
-              fontFamily: "'Montserrat', 'Noto Sans JP', sans-serif",
-              letterSpacing: "2px",
-              color: "#FFFFFF",
-              textShadow:
-                "0px 0px 20px rgba(255,215,0,0.8), " +
-                "0px 0px 40px rgba(255,215,0,0.6), " +
-                "0px 6px 15px rgba(0,0,0,0.95), " +
-                "3px 3px 8px rgba(0,0,0,0.9)",
-              WebkitTextStroke: "1.5px rgba(255,215,0,0.3)",
             }}
           >
-            {lineText}
+            {lineText.split('').map((char, charInLineIndex) => {
+              const currentCharTiming = characterTimings[charIndex];
+              const isActive = currentCharTiming && isCharacterActive(currentCharTiming);
+              charIndex++;
+
+              // アクティブな文字のスタイル
+              const charColor = isActive ? "#FFD700" : "#FFFFFF";
+              const charScale = isActive ? 1.1 : 1.0;
+              const charGlow = isActive
+                ? "0px 0px 30px rgba(255,215,0,1.0), " +
+                  "0px 0px 50px rgba(255,215,0,0.8), " +
+                  "0px 6px 15px rgba(0,0,0,0.95)"
+                : "0px 0px 20px rgba(255,215,0,0.8), " +
+                  "0px 0px 40px rgba(255,215,0,0.6), " +
+                  "0px 6px 15px rgba(0,0,0,0.95), " +
+                  "3px 3px 8px rgba(0,0,0,0.9)";
+
+              return (
+                <span
+                  key={`${subtitle.id}-line-${lineIndex}-char-${charInLineIndex}`}
+                  style={{
+                    display: "inline-block",
+                    fontSize: "clamp(2.4rem, 7vw, 4.5rem)",
+                    fontWeight: 900,
+                    fontFamily: "'Montserrat', 'Noto Sans JP', sans-serif",
+                    letterSpacing: "2px",
+                    color: charColor,
+                    textShadow: charGlow,
+                    WebkitTextStroke: isActive
+                      ? "1.5px rgba(255,215,0,0.6)"
+                      : "1.5px rgba(255,215,0,0.3)",
+                    transform: `scale(${charScale})`,
+                    transition: "all 0.1s ease-out",
+                  }}
+                >
+                  {char}
+                </span>
+              );
+            })}
           </div>
         ))}
       </div>
@@ -226,9 +275,9 @@ export const KRiseTikTok3: React.FC = () => {
         />
       </div>
 
-      {/* 字幕表示（完全固定セグメント） */}
+      {/* 字幕表示（1文字ずつゴールドハイライト） */}
       {currentSubtitle && (
-        <SimpleSubtitle subtitle={currentSubtitle} frame={frame} />
+        <CharacterSyncSubtitle subtitle={currentSubtitle} frame={frame} />
       )}
 
       {/* デバッグ情報（開発時のみ） */}
@@ -245,7 +294,7 @@ export const KRiseTikTok3: React.FC = () => {
           borderRadius: 5,
         }}
       >
-        🎯 K-RISE TikTok 3 | Frame: {frame} | Minimal Hardcoded
+        🎯 K-RISE TikTok 3 | Frame: {frame} | Character-Level Gold Sync
       </div>
     </AbsoluteFill>
   );
