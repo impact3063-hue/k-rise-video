@@ -4,9 +4,11 @@ import { KpopAuditionPattern1 } from "./KpopAuditionPattern1";
 import { AudioDrivenComposition } from "./AudioDrivenComposition";
 import { KRiseTikTok3 } from "./KRiseTikTok3";
 import { KRiseTikTok3Enhanced } from "./KRiseTikTok3Enhanced";
+import { KRiseTikTok4 } from "./KRiseTikTok4";
 import subtitles from "../public/sample-video.json";
 import subtitlesPattern1 from "../public/kpop-audition-pattern1.json";
 import videoDataMaster from "../public/video-data-master.json";
+import videoDataV2 from "../public/video-data-v2-optimized.json";
 
 export const Root: React.FC = () => {
   const lastSubtitle = subtitles[subtitles.length - 1];
@@ -17,6 +19,9 @@ export const Root: React.FC = () => {
 
   // K-RISE TikTok 3の動画の長さ（video-data-master.jsonから取得）
   const durationTikTok3 = (videoDataMaster as any).metadata?.totalFrames || 450;
+
+  // K-RISE TikTok 4の動画の長さ（video-data-v2-optimized.jsonから取得）
+  const durationTikTok4 = (videoDataV2 as any).metadata?.totalFrames || 420;
 
   return (
     <>
@@ -73,6 +78,17 @@ export const Root: React.FC = () => {
         id="KRiseTikTok3Enhanced"
         component={KRiseTikTok3Enhanced}
         durationInFrames={450}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* ✨ K-RISE TikTok 4: Optimized CTA Version */}
+      {/* 最適化版：Ken Burnsエフェクト + 矢印アニメーション + 強化CTA */}
+      <Composition
+        id="KRiseTikTok4"
+        component={KRiseTikTok4}
+        durationInFrames={durationTikTok4}
         fps={30}
         width={1080}
         height={1920}

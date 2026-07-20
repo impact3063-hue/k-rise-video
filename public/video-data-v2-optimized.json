@@ -1,0 +1,190 @@
+{
+  "version": "9.0.0-optimized-cta",
+  "metadata": {
+    "projectId": "K-RISE-TikTok-4-Optimized",
+    "title": "K-RISE Dance Project - Optimized CTA Version",
+    "fps": 30,
+    "duration": 14.0,
+    "totalFrames": 420,
+    "syncMode": "character-level-optimized",
+    "basedOn": "video-data-master.json v8.0.0"
+  },
+  "content": {
+    "script": {
+      "original": "伝説のプロデューサー出口氏による直接審査。未来のK-POPスターを発掘するリアルオーディション。残された席はあとわずか！今すぐ公式LINEからエントリーしよう！",
+      "transcribed": "伝説のプロデューサー出口氏による直接審査。未来のK-POPスターを発掘するリアルオーディション。残された席はあとわずか！今すぐ公式LINEからエントリーしよう！"
+    }
+  },
+  "audio": {
+    "narration": {
+      "file": "audio.mp3",
+      "volume": 0.8
+    },
+    "bgm": {
+      "file": "bg-music.mp3",
+      "volume": 0.3,
+      "loop": true
+    }
+  },
+  "subtitles": [
+    {
+      "id": "seg1",
+      "startFrame": 0,
+      "endFrame": 90,
+      "text": "伝説のプロデューサー\n出口氏による直接審査",
+      "style": {
+        "type": "highlight",
+        "emphasis": "strong"
+      },
+      "characters": [
+        {"char": "伝", "startFrame": 0, "endFrame": 6},
+        {"char": "説", "startFrame": 6, "endFrame": 12},
+        {"char": "の", "startFrame": 12, "endFrame": 15},
+        {"char": "プ", "startFrame": 15, "endFrame": 18},
+        {"char": "ロ", "startFrame": 18, "endFrame": 21},
+        {"char": "デ", "startFrame": 21, "endFrame": 24},
+        {"char": "ュ", "startFrame": 24, "endFrame": 27},
+        {"char": "ー", "startFrame": 27, "endFrame": 30},
+        {"char": "サ", "startFrame": 30, "endFrame": 33},
+        {"char": "ー", "startFrame": 33, "endFrame": 36},
+        {"char": "\n", "startFrame": 36, "endFrame": 36},
+        {"char": "出", "startFrame": 36, "endFrame": 42},
+        {"char": "口", "startFrame": 42, "endFrame": 48},
+        {"char": "氏", "startFrame": 48, "endFrame": 54},
+        {"char": "に", "startFrame": 54, "endFrame": 57},
+        {"char": "よ", "startFrame": 57, "endFrame": 60},
+        {"char": "る", "startFrame": 60, "endFrame": 66},
+        {"char": "直", "startFrame": 66, "endFrame": 72},
+        {"char": "接", "startFrame": 72, "endFrame": 78},
+        {"char": "審", "startFrame": 78, "endFrame": 84},
+        {"char": "査", "startFrame": 84, "endFrame": 90}
+      ]
+    },
+    {
+      "id": "seg2",
+      "startFrame": 90,
+      "endFrame": 180,
+      "text": "未来のK-POPスターを\n発掘するリアルオーディション",
+      "style": {
+        "type": "highlight",
+        "emphasis": "medium"
+      },
+      "characters": [
+        {"char": "未", "startFrame": 90, "endFrame": 96},
+        {"char": "来", "startFrame": 96, "endFrame": 102},
+        {"char": "の", "startFrame": 102, "endFrame": 105},
+        {"char": "K", "startFrame": 105, "endFrame": 108},
+        {"char": "-", "startFrame": 108, "endFrame": 109},
+        {"char": "P", "startFrame": 109, "endFrame": 112},
+        {"char": "O", "startFrame": 112, "endFrame": 115},
+        {"char": "P", "startFrame": 115, "endFrame": 118},
+        {"char": "ス", "startFrame": 118, "endFrame": 121},
+        {"char": "タ", "startFrame": 121, "endFrame": 124},
+        {"char": "ー", "startFrame": 124, "endFrame": 127},
+        {"char": "を", "startFrame": 127, "endFrame": 130},
+        {"char": "\n", "startFrame": 130, "endFrame": 130},
+        {"char": "発", "startFrame": 130, "endFrame": 136},
+        {"char": "掘", "startFrame": 136, "endFrame": 142},
+        {"char": "す", "startFrame": 142, "endFrame": 148},
+        {"char": "る", "startFrame": 148, "endFrame": 154},
+        {"char": "リ", "startFrame": 154, "endFrame": 160},
+        {"char": "ア", "startFrame": 160, "endFrame": 166},
+        {"char": "ル", "startFrame": 166, "endFrame": 172},
+        {"char": "オ", "startFrame": 172, "endFrame": 174},
+        {"char": "ー", "startFrame": 174, "endFrame": 176},
+        {"char": "デ", "startFrame": 176, "endFrame": 178},
+        {"char": "ィ", "startFrame": 178, "endFrame": 179},
+        {"char": "シ", "startFrame": 179, "endFrame": 180},
+        {"char": "ョ", "startFrame": 180, "endFrame": 180},
+        {"char": "ン", "startFrame": 180, "endFrame": 180}
+      ]
+    },
+    {
+      "id": "seg3",
+      "startFrame": 180,
+      "endFrame": 270,
+      "text": "残された席はあとわずか！",
+      "style": {
+        "type": "urgent",
+        "emphasis": "strong",
+        "shake": true
+      },
+      "characters": [
+        {"char": "残", "startFrame": 180, "endFrame": 190},
+        {"char": "さ", "startFrame": 190, "endFrame": 200},
+        {"char": "れ", "startFrame": 200, "endFrame": 210},
+        {"char": "た", "startFrame": 210, "endFrame": 215},
+        {"char": "席", "startFrame": 215, "endFrame": 220},
+        {"char": "は", "startFrame": 220, "endFrame": 225},
+        {"char": "あ", "startFrame": 225, "endFrame": 235},
+        {"char": "と", "startFrame": 235, "endFrame": 245},
+        {"char": "わ", "startFrame": 245, "endFrame": 255},
+        {"char": "ず", "startFrame": 255, "endFrame": 260},
+        {"char": "か", "startFrame": 260, "endFrame": 265},
+        {"char": "！", "startFrame": 265, "endFrame": 270}
+      ]
+    },
+    {
+      "id": "seg4-cta",
+      "startFrame": 270,
+      "endFrame": 420,
+      "text": "今すぐ公式LINEから\nエントリーしよう！",
+      "style": {
+        "type": "cta",
+        "emphasis": "maximum",
+        "pulse": true,
+        "showArrow": true
+      },
+      "characters": [
+        {"char": "今", "startFrame": 270, "endFrame": 280},
+        {"char": "す", "startFrame": 280, "endFrame": 290},
+        {"char": "ぐ", "startFrame": 290, "endFrame": 300},
+        {"char": "公", "startFrame": 300, "endFrame": 308},
+        {"char": "式", "startFrame": 308, "endFrame": 316},
+        {"char": "L", "startFrame": 316, "endFrame": 322},
+        {"char": "I", "startFrame": 322, "endFrame": 328},
+        {"char": "N", "startFrame": 328, "endFrame": 334},
+        {"char": "E", "startFrame": 334, "endFrame": 340},
+        {"char": "か", "startFrame": 340, "endFrame": 346},
+        {"char": "ら", "startFrame": 346, "endFrame": 352},
+        {"char": "\n", "startFrame": 352, "endFrame": 352},
+        {"char": "エ", "startFrame": 352, "endFrame": 362},
+        {"char": "ン", "startFrame": 362, "endFrame": 372},
+        {"char": "ト", "startFrame": 372, "endFrame": 382},
+        {"char": "リ", "startFrame": 382, "endFrame": 392},
+        {"char": "ー", "startFrame": 392, "endFrame": 400},
+        {"char": "し", "startFrame": 400, "endFrame": 408},
+        {"char": "よ", "startFrame": 408, "endFrame": 414},
+        {"char": "う", "startFrame": 414, "endFrame": 418},
+        {"char": "！", "startFrame": 418, "endFrame": 420}
+      ],
+      "ctaSubtext": {
+        "text": "プロフィール欄のリンクをタップ！",
+        "startFrame": 300,
+        "endFrame": 420,
+        "position": "bottom"
+      }
+    }
+  ],
+  "visualEffects": {
+    "background": {
+      "kenBurns": {
+        "enabled": true,
+        "zoomFrom": 1.0,
+        "zoomTo": 1.15,
+        "duration": 420
+      },
+      "neonPulse": {
+        "enabled": true,
+        "color": "#FFD700",
+        "intensity": 0.3,
+        "speed": 2.0
+      }
+    },
+    "characterAnimation": {
+      "activeScale": 1.15,
+      "activeDuration": 0.1,
+      "glowIntensity": 1.2
+    }
+  }
+}
