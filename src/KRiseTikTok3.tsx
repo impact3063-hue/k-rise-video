@@ -7,6 +7,7 @@
  * - 1文字単位の超精密同期（Character-level timestamp）
  * - 発音中の文字のみゴールド (#FFD700) + スケール1.2倍
  * - パフォーマンス最適化：メモ化とフレーム単位判定
+ * - BudouXによる自然な改行処理（単語の途中で改行しない）
  */
 
 import React, { useMemo } from "react";
@@ -18,6 +19,11 @@ import {
   interpolate,
   Img,
 } from "remotion";
+import {
+  groupCharactersByWords,
+  splitIntoLines,
+  calculateOptimalLineLength,
+} from "./utils/wordBreaker";
 
 // 型定義
 interface CharacterTimestamp {
@@ -108,7 +114,7 @@ const videoData = videoDataMaster as VideoData;
 
 /**
  * 🎯 Character-Level Karaoke Subtitle Component
- * パフォーマンス最適化版：1文字単位の超精密同期
+ * パフォーマンス最適化版：1文字単位の超精密同期 + BudouX自然改行
  */
 const CharacterLevelSubtitle: React.FC<{
   subtitle: Subtitle;
@@ -129,73 +135,123 @@ const CharacterLevelSubtitle: React.FC<{
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
   );
 
-  // 🎯 1文字単位のレンダリング（パフォーマンス最適化）
-  const renderCharacters = useMemo(() => {
+  // 🎯 BudouXによる単語単位のグループ化と行分割
+  const lines = useMemo(() => {
     if (!subtitle.characters || subtitle.characters.length === 0) {
-      // フォールバック：通常の文字列表示
-      return <span>{subtitle.text}</span>;
+      return [[subtitle.text.split('').map((char, i) => ({
+        char,
+        startFrame: startFrame,
+        endFrame: endFrame,
+        startTime: 0,
+        endTime: 0,
+        duration: 0,
+        wordIndex: 0
+      }))]];
     }
 
-    return subtitle.characters.map((charData, index) => {
-      const charStartFrame = charData.startFrame;
-      const charEndFrame = charData.endFrame;
+    // 単語単位でグループ化
+    const wordGroups = groupCharactersByWords(subtitle.characters, subtitle.text);
+    
+    // 最適な1行あたりの文字数を計算
+    const optimalLineLength = calculateOptimalLineLength(subtitle.characters.length);
+    
+    // 行に分割
+    const lineGroups = splitIntoLines(wordGroups, optimalLineLength);
+    
+    return lineGroups;
+  }, [subtitle, startFrame, endFrame]);
 
-      // 🎯 アクティブ判定：半開区間 [start, end) — 境界フレームでの2文字同時ゴールドを防止
-      const isActive = frame >= charStartFrame && frame < charEndFrame;
-
-      // 🔥 マーケティング最適化：初速3秒フック率爆発仕様
-      // 発音中の1文字を「ゴールド + 1.1倍拡大 + パルス発光」で視線誘導
-      const charLocalFrame = frame - charStartFrame;
-      const charDur = Math.max(1, charEndFrame - charStartFrame);
-      const charMid = Math.min(3, charDur / 2);
+  // 🎯 1文字単位のレンダリング（パフォーマンス最適化 + 単語単位の改行）
+  const renderLines = useMemo(() => {
+    return lines.map((line, lineIndex) => {
+      const lineChars = line.flat();
       
-      // 🎯 1.1倍スケール + パルスアニメーション（発音中のみ）
-      const charScale = isActive
-        ? interpolate(
-            charLocalFrame,
-            [0, charMid, charDur],
-            [1, 1.1, 1.1],
-            { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-          )
-        : 1;
-
-      // 🎨 カラオケスタイルの色分け
-      let charColor: string;
-      let charShadow: string;
-
-      if (isActive) {
-        // 🔥 現在発音中 → ゴールド (#FFD700) + 1.1倍拡大 + 強烈な発光エフェクト
-        charColor = "#FFD700"; // ゴールド
-        charShadow =
-          "0px 0px 25px rgba(255,215,0,1), " +
-          "0px 0px 50px rgba(255,215,0,0.9), " +
-          "0px 0px 75px rgba(255,215,0,0.7), " +
-          "0px 6px 15px rgba(0,0,0,0.95), " +
-          "drop-shadow(0px 0px 30px rgba(255,215,0,1))";
-      } else {
-        // 未発音・発音済み → 白（半透明）で常に表示
-        charColor = "rgba(255, 255, 255, 0.6)"; // 白（半透明）
-        charShadow = "0px 0px 8px rgba(255,255,255,0.3), 0px 4px 12px rgba(0,0,0,0.7)";
-      }
-
       return (
-        <span
-          key={`${subtitle.id}-char-${index}`}
+        <div
+          key={`${subtitle.id}-line-${lineIndex}`}
           style={{
-            display: "inline-block",
-            whiteSpace: "pre",
-            transform: `scale(${charScale})`,
-            transformOrigin: "center center",
-            color: charColor,
-            textShadow: charShadow,
-            padding: "0 2px",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "0px",
           }}
         >
-          {charData.char}
-        </span>
+          {line.map((wordGroup, wordIndex) => (
+            <span
+              key={`${subtitle.id}-line-${lineIndex}-word-${wordIndex}`}
+              style={{
+                display: "inline-flex",
+                flexWrap: "nowrap",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {wordGroup.map((charData, charIndex) => {
+                const charStartFrame = charData.startFrame;
+                const charEndFrame = charData.endFrame;
+
+                // 🎯 アクティブ判定：半開区間 [start, end) — 境界フレームでの2文字同時ゴールドを防止
+                const isActive = frame >= charStartFrame && frame < charEndFrame;
+
+                // 🔥 マーケティング最適化：初速3秒フック率爆発仕様
+                // 発音中の1文字を「ゴールド + 1.1倍拡大 + パルス発光」で視線誘導
+                const charLocalFrame = frame - charStartFrame;
+                const charDur = Math.max(1, charEndFrame - charStartFrame);
+                const charMid = Math.min(3, charDur / 2);
+                
+                // 🎯 1.1倍スケール + パルスアニメーション（発音中のみ）
+                const charScale = isActive
+                  ? interpolate(
+                      charLocalFrame,
+                      [0, charMid, charDur],
+                      [1, 1.1, 1.1],
+                      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+                    )
+                  : 1;
+
+                // 🎨 カラオケスタイルの色分け
+                let charColor: string;
+                let charShadow: string;
+
+                if (isActive) {
+                  // 🔥 現在発音中 → ゴールド (#FFD700) + 1.1倍拡大 + 強烈な発光エフェクト
+                  charColor = "#FFD700"; // ゴールド
+                  charShadow =
+                    "0px 0px 25px rgba(255,215,0,1), " +
+                    "0px 0px 50px rgba(255,215,0,0.9), " +
+                    "0px 0px 75px rgba(255,215,0,0.7), " +
+                    "0px 6px 15px rgba(0,0,0,0.95), " +
+                    "drop-shadow(0px 0px 30px rgba(255,215,0,1))";
+                } else {
+                  // 未発音・発音済み → 白（半透明）で常に表示
+                  charColor = "rgba(255, 255, 255, 0.6)"; // 白（半透明）
+                  charShadow = "0px 0px 8px rgba(255,255,255,0.3), 0px 4px 12px rgba(0,0,0,0.7)";
+                }
+
+                return (
+                  <span
+                    key={`${subtitle.id}-line-${lineIndex}-word-${wordIndex}-char-${charIndex}`}
+                    style={{
+                      display: "inline-block",
+                      whiteSpace: "pre",
+                      transform: `scale(${charScale})`,
+                      transformOrigin: "center center",
+                      color: charColor,
+                      textShadow: charShadow,
+                      padding: "0 2px",
+                    }}
+                  >
+                    {charData.char}
+                  </span>
+                );
+              })}
+            </span>
+          ))}
+        </div>
       );
     });
-  }, [subtitle, frame]);
+  }, [subtitle, frame, lines]);
 
   // 字幕全体の表示判定（全Hooks実行後に判定 — Rules of Hooks遵守）
   if (frame < startFrame || frame > endFrame) {
@@ -223,11 +279,10 @@ const CharacterLevelSubtitle: React.FC<{
           width: "100%",
           maxWidth: "90%",
           display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          rowGap: "16px",
+          gap: "16px",
           textAlign: "center",
           fontSize: "clamp(3rem, 9vw, 5.5rem)",
           fontWeight: 900,
@@ -236,7 +291,7 @@ const CharacterLevelSubtitle: React.FC<{
           lineHeight: 1.5,
         }}
       >
-        {renderCharacters}
+        {renderLines}
       </div>
     </div>
   );

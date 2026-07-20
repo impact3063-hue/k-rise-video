@@ -1,0 +1,3 @@
+# Roo Code自己修復ルール
+- Roo Codeが「API Request... 0%」でフリーズ時: ai-skills/ripgrep-fix-skill.md の手順を即実行（診断1コマンド+修復1コマンド、10秒以内、他ファイル読み込み禁止）
+- 原因の第一候補は「VS Code自動更新による @vscode/ripgrep/bin/rg.exe 消失」。認証・残高・DBを疑うのはその後
