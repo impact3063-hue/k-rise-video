@@ -1,11 +1,11 @@
 {
-  "version": "10.3.0-optimized-phrases",
+  "version": "10.4.0-extended-audio",
   "metadata": {
-    "projectId": "K-RISE-TikTok-CapCut-Optimized",
-    "title": "K-RISE Dance Project - Optimized Japanese Phrases",
+    "projectId": "K-RISE-TikTok-CapCut-Extended",
+    "title": "K-RISE Dance Project - Extended Audio Duration",
     "fps": 30,
-    "duration": 14.0,
-    "totalFrames": 420,
+    "duration": 15.0,
+    "totalFrames": 450,
     "displayMode": "phrase-by-phrase",
     "description": "Properly formatted Japanese phrases with Whisper-based timing",
     "timingSource": "Whisper timestamps with optimized phrase boundaries"
@@ -75,7 +75,7 @@
     {
       "text": "エントリーしよう！",
       "startFrame": 403,
-      "endFrame": 420
+      "endFrame": 450
     }
   ],
   "visualEffects": {
@@ -84,7 +84,7 @@
         "enabled": true,
         "zoomFrom": 1.0,
         "zoomTo": 1.15,
-        "duration": 420
+        "duration": 450
       },
       "neonPulse": {
         "enabled": true,
@@ -104,7 +104,7 @@
   "cta": {
     "text": "プロフィール欄のリンクをタップ！",
     "startFrame": 352,
-    "endFrame": 420,
+    "endFrame": 450,
     "showArrow": true
   }
 }
