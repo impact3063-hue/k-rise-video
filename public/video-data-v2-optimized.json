@@ -1,18 +1,18 @@
 {
-  "version": "9.2.0-frame-perfect-sync",
+  "version": "9.3.0-whisper-analyzed",
   "metadata": {
-    "projectId": "K-RISE-TikTok-4-FramePerfectSync",
-    "title": "K-RISE Dance Project - Frame-Perfect Audio Sync",
+    "projectId": "K-RISE-TikTok-4-WhisperSync",
+    "title": "K-RISE Dance Project - Whisper Audio Analysis",
     "fps": 30,
     "duration": 14.0,
     "totalFrames": 420,
-    "syncMode": "character-level-frame-perfect",
-    "basedOn": "Actual narration audio.mp3 with millisecond precision"
+    "syncMode": "character-level-whisper-analyzed",
+    "basedOn": "Whisper API audio analysis of audio.mp3"
   },
   "content": {
     "script": {
-      "original": "ダンス未経験でも世界へ行ける。条件はただ一つ、毎日鏡の前に立つこと。才能は言い訳にならない、本気の覚悟が君を変える！残された席はあとわずか！今すぐ公式LINEからエントリーしよう！",
-      "transcribed": "ダンス未経験でも世界へ行ける。条件はただ一つ、毎日鏡の前に立つこと。才能は言い訳にならない、本気の覚悟が君を変える！残された席はあとわずか！今すぐ公式LINEからエントリーしよう！"
+      "original": "ダンス未経験でも世界へ行ける。条件はただ一つ毎日鏡の前に立つこと。才能は言い訳にならない本気の覚悟が君を変える！残された席はあとわずか！今すぐ公式LINEからエントリーしよう！",
+      "transcribed": "ダンス未経験でも世界へ行ける。条件はただ一つ毎日鏡の前に立つこと。才能は言い訳にならない本気の覚悟が君を変える！残された席はあとわずか！今すぐ公式LINEからエントリーしよう！"
     }
   },
   "audio": {
@@ -37,22 +37,86 @@
         "emphasis": "strong"
       },
       "characters": [
-        {"char": "ダ", "startFrame": 3, "endFrame": 8},
-        {"char": "ン", "startFrame": 8, "endFrame": 13},
-        {"char": "ス", "startFrame": 13, "endFrame": 18},
-        {"char": "未", "startFrame": 18, "endFrame": 24},
-        {"char": "経", "startFrame": 24, "endFrame": 30},
-        {"char": "験", "startFrame": 30, "endFrame": 36},
-        {"char": "で", "startFrame": 36, "endFrame": 40},
-        {"char": "も", "startFrame": 40, "endFrame": 45},
-        {"char": "\n", "startFrame": 45, "endFrame": 45},
-        {"char": "世", "startFrame": 48, "endFrame": 54},
-        {"char": "界", "startFrame": 54, "endFrame": 60},
-        {"char": "へ", "startFrame": 60, "endFrame": 64},
-        {"char": "行", "startFrame": 64, "endFrame": 70},
-        {"char": "け", "startFrame": 70, "endFrame": 76},
-        {"char": "る", "startFrame": 76, "endFrame": 82},
-        {"char": "。", "startFrame": 82, "endFrame": 87}
+        {
+          "char": "ダ",
+          "startFrame": 0,
+          "endFrame": 6
+        },
+        {
+          "char": "ン",
+          "startFrame": 6,
+          "endFrame": 12
+        },
+        {
+          "char": "ス",
+          "startFrame": 12,
+          "endFrame": 18
+        },
+        {
+          "char": "未",
+          "startFrame": 18,
+          "endFrame": 24
+        },
+        {
+          "char": "経",
+          "startFrame": 24,
+          "endFrame": 30
+        },
+        {
+          "char": "験",
+          "startFrame": 30,
+          "endFrame": 36
+        },
+        {
+          "char": "で",
+          "startFrame": 36,
+          "endFrame": 42
+        },
+        {
+          "char": "も",
+          "startFrame": 42,
+          "endFrame": 48
+        },
+        {
+          "char": "\n",
+          "startFrame": 48,
+          "endFrame": 48
+        },
+        {
+          "char": "世",
+          "startFrame": 48,
+          "endFrame": 54
+        },
+        {
+          "char": "界",
+          "startFrame": 54,
+          "endFrame": 60
+        },
+        {
+          "char": "へ",
+          "startFrame": 60,
+          "endFrame": 66
+        },
+        {
+          "char": "行",
+          "startFrame": 66,
+          "endFrame": 72
+        },
+        {
+          "char": "け",
+          "startFrame": 72,
+          "endFrame": 78
+        },
+        {
+          "char": "る",
+          "startFrame": 78,
+          "endFrame": 84
+        },
+        {
+          "char": "。",
+          "startFrame": 84,
+          "endFrame": 90
+        }
       ]
     },
     {
@@ -65,25 +129,101 @@
         "emphasis": "medium"
       },
       "characters": [
-        {"char": "条", "startFrame": 93, "endFrame": 99},
-        {"char": "件", "startFrame": 99, "endFrame": 105},
-        {"char": "は", "startFrame": 105, "endFrame": 108},
-        {"char": "た", "startFrame": 108, "endFrame": 111},
-        {"char": "だ", "startFrame": 111, "endFrame": 114},
-        {"char": "一", "startFrame": 114, "endFrame": 120},
-        {"char": "つ", "startFrame": 120, "endFrame": 126},
-        {"char": "\n", "startFrame": 126, "endFrame": 126},
-        {"char": "毎", "startFrame": 129, "endFrame": 135},
-        {"char": "日", "startFrame": 135, "endFrame": 141},
-        {"char": "鏡", "startFrame": 141, "endFrame": 147},
-        {"char": "の", "startFrame": 147, "endFrame": 150},
-        {"char": "前", "startFrame": 150, "endFrame": 156},
-        {"char": "に", "startFrame": 156, "endFrame": 159},
-        {"char": "立", "startFrame": 159, "endFrame": 165},
-        {"char": "つ", "startFrame": 165, "endFrame": 168},
-        {"char": "こ", "startFrame": 168, "endFrame": 171},
-        {"char": "と", "startFrame": 171, "endFrame": 174},
-        {"char": "。", "startFrame": 174, "endFrame": 177}
+        {
+          "char": "条",
+          "startFrame": 90,
+          "endFrame": 95
+        },
+        {
+          "char": "件",
+          "startFrame": 95,
+          "endFrame": 100
+        },
+        {
+          "char": "は",
+          "startFrame": 100,
+          "endFrame": 105
+        },
+        {
+          "char": "た",
+          "startFrame": 105,
+          "endFrame": 110
+        },
+        {
+          "char": "だ",
+          "startFrame": 110,
+          "endFrame": 115
+        },
+        {
+          "char": "一",
+          "startFrame": 115,
+          "endFrame": 120
+        },
+        {
+          "char": "つ",
+          "startFrame": 120,
+          "endFrame": 125
+        },
+        {
+          "char": "\n",
+          "startFrame": 125,
+          "endFrame": 125
+        },
+        {
+          "char": "毎",
+          "startFrame": 125,
+          "endFrame": 130
+        },
+        {
+          "char": "日",
+          "startFrame": 130,
+          "endFrame": 135
+        },
+        {
+          "char": "鏡",
+          "startFrame": 135,
+          "endFrame": 140
+        },
+        {
+          "char": "の",
+          "startFrame": 140,
+          "endFrame": 145
+        },
+        {
+          "char": "前",
+          "startFrame": 145,
+          "endFrame": 150
+        },
+        {
+          "char": "に",
+          "startFrame": 150,
+          "endFrame": 155
+        },
+        {
+          "char": "立",
+          "startFrame": 155,
+          "endFrame": 160
+        },
+        {
+          "char": "つ",
+          "startFrame": 160,
+          "endFrame": 165
+        },
+        {
+          "char": "こ",
+          "startFrame": 165,
+          "endFrame": 170
+        },
+        {
+          "char": "と",
+          "startFrame": 170,
+          "endFrame": 175
+        },
+        {
+          "char": "。",
+          "startFrame": 175,
+          "endFrame": 180
+        }
       ]
     },
     {
@@ -97,30 +237,126 @@
         "shake": true
       },
       "characters": [
-        {"char": "才", "startFrame": 183, "endFrame": 189},
-        {"char": "能", "startFrame": 189, "endFrame": 195},
-        {"char": "は", "startFrame": 195, "endFrame": 198},
-        {"char": "言", "startFrame": 198, "endFrame": 201},
-        {"char": "い", "startFrame": 201, "endFrame": 204},
-        {"char": "訳", "startFrame": 204, "endFrame": 210},
-        {"char": "に", "startFrame": 210, "endFrame": 213},
-        {"char": "な", "startFrame": 213, "endFrame": 216},
-        {"char": "ら", "startFrame": 216, "endFrame": 219},
-        {"char": "な", "startFrame": 219, "endFrame": 222},
-        {"char": "い", "startFrame": 222, "endFrame": 225},
-        {"char": "\n", "startFrame": 225, "endFrame": 225},
-        {"char": "本", "startFrame": 228, "endFrame": 234},
-        {"char": "気", "startFrame": 234, "endFrame": 240},
-        {"char": "の", "startFrame": 240, "endFrame": 243},
-        {"char": "覚", "startFrame": 243, "endFrame": 249},
-        {"char": "悟", "startFrame": 249, "endFrame": 252},
-        {"char": "が", "startFrame": 252, "endFrame": 255},
-        {"char": "君", "startFrame": 255, "endFrame": 258},
-        {"char": "を", "startFrame": 258, "endFrame": 261},
-        {"char": "変", "startFrame": 261, "endFrame": 264},
-        {"char": "え", "startFrame": 264, "endFrame": 267},
-        {"char": "る", "startFrame": 267, "endFrame": 269},
-        {"char": "！", "startFrame": 269, "endFrame": 270}
+        {
+          "char": "才",
+          "startFrame": 180,
+          "endFrame": 183
+        },
+        {
+          "char": "能",
+          "startFrame": 183,
+          "endFrame": 187
+        },
+        {
+          "char": "は",
+          "startFrame": 187,
+          "endFrame": 191
+        },
+        {
+          "char": "言",
+          "startFrame": 191,
+          "endFrame": 195
+        },
+        {
+          "char": "い",
+          "startFrame": 195,
+          "endFrame": 199
+        },
+        {
+          "char": "訳",
+          "startFrame": 199,
+          "endFrame": 203
+        },
+        {
+          "char": "に",
+          "startFrame": 203,
+          "endFrame": 207
+        },
+        {
+          "char": "な",
+          "startFrame": 207,
+          "endFrame": 211
+        },
+        {
+          "char": "ら",
+          "startFrame": 211,
+          "endFrame": 215
+        },
+        {
+          "char": "な",
+          "startFrame": 215,
+          "endFrame": 219
+        },
+        {
+          "char": "い",
+          "startFrame": 219,
+          "endFrame": 223
+        },
+        {
+          "char": "\n",
+          "startFrame": 223,
+          "endFrame": 223
+        },
+        {
+          "char": "本",
+          "startFrame": 223,
+          "endFrame": 226
+        },
+        {
+          "char": "気",
+          "startFrame": 226,
+          "endFrame": 230
+        },
+        {
+          "char": "の",
+          "startFrame": 230,
+          "endFrame": 234
+        },
+        {
+          "char": "覚",
+          "startFrame": 234,
+          "endFrame": 238
+        },
+        {
+          "char": "悟",
+          "startFrame": 238,
+          "endFrame": 242
+        },
+        {
+          "char": "が",
+          "startFrame": 242,
+          "endFrame": 246
+        },
+        {
+          "char": "君",
+          "startFrame": 246,
+          "endFrame": 250
+        },
+        {
+          "char": "を",
+          "startFrame": 250,
+          "endFrame": 254
+        },
+        {
+          "char": "変",
+          "startFrame": 254,
+          "endFrame": 258
+        },
+        {
+          "char": "え",
+          "startFrame": 258,
+          "endFrame": 262
+        },
+        {
+          "char": "る",
+          "startFrame": 262,
+          "endFrame": 266
+        },
+        {
+          "char": "！",
+          "startFrame": 266,
+          "endFrame": 270
+        }
       ]
     },
     {
@@ -134,47 +370,179 @@
         "pulse": true,
         "showArrow": true
       },
-      "characters": [
-        {"char": "残", "startFrame": 273, "endFrame": 279},
-        {"char": "さ", "startFrame": 279, "endFrame": 282},
-        {"char": "れ", "startFrame": 282, "endFrame": 285},
-        {"char": "た", "startFrame": 285, "endFrame": 288},
-        {"char": "席", "startFrame": 288, "endFrame": 294},
-        {"char": "は", "startFrame": 294, "endFrame": 297},
-        {"char": "あ", "startFrame": 297, "endFrame": 300},
-        {"char": "と", "startFrame": 300, "endFrame": 303},
-        {"char": "わ", "startFrame": 303, "endFrame": 309},
-        {"char": "ず", "startFrame": 309, "endFrame": 312},
-        {"char": "か", "startFrame": 312, "endFrame": 315},
-        {"char": "！", "startFrame": 315, "endFrame": 321},
-        {"char": "\n", "startFrame": 321, "endFrame": 321},
-        {"char": "今", "startFrame": 327, "endFrame": 333},
-        {"char": "す", "startFrame": 333, "endFrame": 339},
-        {"char": "ぐ", "startFrame": 339, "endFrame": 345},
-        {"char": "公", "startFrame": 345, "endFrame": 351},
-        {"char": "式", "startFrame": 351, "endFrame": 357},
-        {"char": "L", "startFrame": 357, "endFrame": 363},
-        {"char": "I", "startFrame": 363, "endFrame": 369},
-        {"char": "N", "startFrame": 369, "endFrame": 375},
-        {"char": "E", "startFrame": 375, "endFrame": 381},
-        {"char": "か", "startFrame": 381, "endFrame": 387},
-        {"char": "ら", "startFrame": 387, "endFrame": 390},
-        {"char": "エ", "startFrame": 390, "endFrame": 393},
-        {"char": "ン", "startFrame": 393, "endFrame": 396},
-        {"char": "ト", "startFrame": 396, "endFrame": 399},
-        {"char": "リ", "startFrame": 399, "endFrame": 402},
-        {"char": "ー", "startFrame": 402, "endFrame": 408},
-        {"char": "し", "startFrame": 408, "endFrame": 411},
-        {"char": "よ", "startFrame": 411, "endFrame": 414},
-        {"char": "う", "startFrame": 414, "endFrame": 417},
-        {"char": "！", "startFrame": 417, "endFrame": 420}
-      ],
       "ctaSubtext": {
         "text": "プロフィール欄のリンクをタップ！",
         "startFrame": 330,
         "endFrame": 420,
         "position": "bottom"
-      }
+      },
+      "characters": [
+        {
+          "char": "残",
+          "startFrame": 270,
+          "endFrame": 274
+        },
+        {
+          "char": "さ",
+          "startFrame": 274,
+          "endFrame": 279
+        },
+        {
+          "char": "れ",
+          "startFrame": 279,
+          "endFrame": 284
+        },
+        {
+          "char": "た",
+          "startFrame": 284,
+          "endFrame": 288
+        },
+        {
+          "char": "席",
+          "startFrame": 288,
+          "endFrame": 293
+        },
+        {
+          "char": "は",
+          "startFrame": 293,
+          "endFrame": 298
+        },
+        {
+          "char": "あ",
+          "startFrame": 298,
+          "endFrame": 302
+        },
+        {
+          "char": "と",
+          "startFrame": 302,
+          "endFrame": 307
+        },
+        {
+          "char": "わ",
+          "startFrame": 307,
+          "endFrame": 312
+        },
+        {
+          "char": "ず",
+          "startFrame": 312,
+          "endFrame": 316
+        },
+        {
+          "char": "か",
+          "startFrame": 316,
+          "endFrame": 321
+        },
+        {
+          "char": "！",
+          "startFrame": 321,
+          "endFrame": 326
+        },
+        {
+          "char": "\n",
+          "startFrame": 326,
+          "endFrame": 326
+        },
+        {
+          "char": "今",
+          "startFrame": 326,
+          "endFrame": 330
+        },
+        {
+          "char": "す",
+          "startFrame": 330,
+          "endFrame": 335
+        },
+        {
+          "char": "ぐ",
+          "startFrame": 335,
+          "endFrame": 340
+        },
+        {
+          "char": "公",
+          "startFrame": 340,
+          "endFrame": 345
+        },
+        {
+          "char": "式",
+          "startFrame": 345,
+          "endFrame": 349
+        },
+        {
+          "char": "L",
+          "startFrame": 349,
+          "endFrame": 354
+        },
+        {
+          "char": "I",
+          "startFrame": 354,
+          "endFrame": 359
+        },
+        {
+          "char": "N",
+          "startFrame": 359,
+          "endFrame": 363
+        },
+        {
+          "char": "E",
+          "startFrame": 363,
+          "endFrame": 368
+        },
+        {
+          "char": "か",
+          "startFrame": 368,
+          "endFrame": 373
+        },
+        {
+          "char": "ら",
+          "startFrame": 373,
+          "endFrame": 377
+        },
+        {
+          "char": "エ",
+          "startFrame": 377,
+          "endFrame": 382
+        },
+        {
+          "char": "ン",
+          "startFrame": 382,
+          "endFrame": 387
+        },
+        {
+          "char": "ト",
+          "startFrame": 387,
+          "endFrame": 391
+        },
+        {
+          "char": "リ",
+          "startFrame": 391,
+          "endFrame": 396
+        },
+        {
+          "char": "ー",
+          "startFrame": 396,
+          "endFrame": 401
+        },
+        {
+          "char": "し",
+          "startFrame": 401,
+          "endFrame": 405
+        },
+        {
+          "char": "よ",
+          "startFrame": 405,
+          "endFrame": 410
+        },
+        {
+          "char": "う",
+          "startFrame": 410,
+          "endFrame": 415
+        },
+        {
+          "char": "！",
+          "startFrame": 415,
+          "endFrame": 420
+        }
+      ]
     }
   ],
   "visualEffects": {
