@@ -1,13 +1,13 @@
 /**
- * 🎬 K-RISE TikTok Video 3 - Character-Level Sync
- * 世界標準動画システム - 1文字単位の超精密同期
+ * 🎬 K-RISE TikTok Video 3 - Hardcoded Subtitle Segments
+ * 完全固定字幕システム - 単語切れ・画面混同の100%強制修正
  *
  * 特徴:
- * - Single Source of Truth: video-data-master.json から完全データ駆動
+ * - 完全静的データ駆動：4つの固定セグメントのみ
+ * - \n による明示的な改行制御（単語の途中で改行しない）
  * - 1文字単位の超精密同期（Character-level timestamp）
- * - 発音中の文字のみゴールド (#FFD700) + スケール1.2倍
- * - パフォーマンス最適化：メモ化とフレーム単位判定
- * - BudouXによる自然な改行処理（単語の途中で改行しない）
+ * - 発音中の文字のみゴールド (#FFD700) + スケール1.1倍
+ * - BudouX自動分割ロジックを完全廃止
  */
 
 import React, { useMemo } from "react";
@@ -19,11 +19,6 @@ import {
   interpolate,
   Img,
 } from "remotion";
-import {
-  groupCharactersByWords,
-  splitIntoLines,
-  calculateOptimalLineLength,
-} from "./utils/wordBreaker";
 
 // 型定義
 interface CharacterTimestamp {
@@ -113,8 +108,8 @@ import videoDataMaster from "../public/video-data-master.json";
 const videoData = videoDataMaster as VideoData;
 
 /**
- * 🎯 Character-Level Karaoke Subtitle Component
- * パフォーマンス最適化版：1文字単位の超精密同期 + BudouX自然改行
+ * 🎯 Character-Level Karaoke Subtitle Component (Hardcoded Version)
+ * 完全固定版：\n による明示的な改行のみ使用
  */
 const CharacterLevelSubtitle: React.FC<{
   subtitle: Subtitle;
@@ -139,120 +134,101 @@ const CharacterLevelSubtitle: React.FC<{
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
   );
 
-  // 🎯 BudouXによる単語単位のグループ化と行分割
+  // 🎯 \n で行を分割（完全固定）
   const lines = useMemo(() => {
-    if (!subtitle.characters || subtitle.characters.length === 0) {
-      return [[subtitle.text.split('').map((char, i) => ({
-        char,
-        startFrame: startFrame,
-        endFrame: endFrame,
-        startTime: 0,
-        endTime: 0,
-        duration: 0,
-        wordIndex: 0
-      }))]];
-    }
+    return subtitle.text.split('\n');
+  }, [subtitle.text]);
 
-    // 単語単位でグループ化
-    const wordGroups = groupCharactersByWords(subtitle.characters, subtitle.text);
-    
-    // 最適な1行あたりの文字数を計算
-    const optimalLineLength = calculateOptimalLineLength(subtitle.characters.length);
-    
-    // 行に分割
-    const lineGroups = splitIntoLines(wordGroups, optimalLineLength);
-    
-    return lineGroups;
-  }, [subtitle, startFrame, endFrame]);
-
-  // 🎯 1文字単位のレンダリング（パフォーマンス最適化 + 単語単位の改行）
+  // 🎯 1文字単位のレンダリング（完全固定版）
   const renderLines = useMemo(() => {
-    return lines.map((line, lineIndex) => {
-      const lineChars = line.flat();
+    let charIndex = 0;
+
+    return lines.map((lineText, lineIndex) => {
+      const lineChars: React.ReactNode[] = [];
       
+      for (let i = 0; i < lineText.length; i++) {
+        const char = lineText[i];
+        const charData = subtitle.characters[charIndex];
+        
+        if (!charData) {
+          // キャラクターデータがない場合はスキップ
+          charIndex++;
+          continue;
+        }
+
+        const charStartFrame = charData.startFrame;
+        const charEndFrame = charData.endFrame;
+
+        // 🎯 アクティブ判定：半開区間 [start, end) — 境界フレームでの2文字同時ゴールドを防止
+        const isActive = frame >= charStartFrame && frame < charEndFrame;
+
+        // 🔥 マーケティング最適化：初速3秒フック率爆発仕様
+        // 発音中の1文字を「ゴールド + 1.1倍拡大 + パルス発光」で視線誘導
+        const charLocalFrame = frame - charStartFrame;
+        const charDur = Math.max(1, charEndFrame - charStartFrame);
+        const charMid = Math.min(3, charDur / 2);
+        
+        // 🎯 1.1倍スケール + パルスアニメーション（発音中のみ）
+        const charScale = isActive
+          ? interpolate(
+              charLocalFrame,
+              [0, charMid, charDur],
+              [1, 1.1, 1.1],
+              { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+            )
+          : 1;
+
+        // 🎨 カラオケスタイルの色分け
+        let charColor: string;
+        let charShadow: string;
+
+        if (isActive) {
+          // 🔥 現在発音中 → ゴールド (#FFD700) + 1.1倍拡大 + 強烈な発光エフェクト
+          charColor = "#FFD700"; // ゴールド
+          charShadow =
+            "0px 0px 25px rgba(255,215,0,1), " +
+            "0px 0px 50px rgba(255,215,0,0.9), " +
+            "0px 0px 75px rgba(255,215,0,0.7), " +
+            "0px 6px 15px rgba(0,0,0,0.95), " +
+            "drop-shadow(0px 0px 30px rgba(255,215,0,1))";
+        } else {
+          // 未発音・発音済み → 白（半透明）で常に表示
+          charColor = "rgba(255, 255, 255, 0.6)"; // 白（半透明）
+          charShadow = "0px 0px 8px rgba(255,255,255,0.3), 0px 4px 12px rgba(0,0,0,0.7)";
+        }
+
+        lineChars.push(
+          <span
+            key={`${subtitle.id}-line-${lineIndex}-char-${i}`}
+            style={{
+              display: "inline-block",
+              whiteSpace: "pre",
+              transform: `scale(${charScale})`,
+              transformOrigin: "center center",
+              color: charColor,
+              textShadow: charShadow,
+              padding: "0 2px",
+            }}
+          >
+            {char}
+          </span>
+        );
+
+        charIndex++;
+      }
+
       return (
         <div
           key={`${subtitle.id}-line-${lineIndex}`}
           style={{
             display: "flex",
             flexDirection: "row",
-            flexWrap: "wrap",
             justifyContent: "center",
             alignItems: "center",
-            gap: "4px",
             width: "100%",
           }}
         >
-          {line.map((wordGroup, wordIndex) => (
-            <span
-              key={`${subtitle.id}-line-${lineIndex}-word-${wordIndex}`}
-              style={{
-                display: "inline-block",
-                whiteSpace: "nowrap",
-                wordBreak: "keep-all",
-              }}
-            >
-              {wordGroup.map((charData, charIndex) => {
-                const charStartFrame = charData.startFrame;
-                const charEndFrame = charData.endFrame;
-
-                // 🎯 アクティブ判定：半開区間 [start, end) — 境界フレームでの2文字同時ゴールドを防止
-                const isActive = frame >= charStartFrame && frame < charEndFrame;
-
-                // 🔥 マーケティング最適化：初速3秒フック率爆発仕様
-                // 発音中の1文字を「ゴールド + 1.1倍拡大 + パルス発光」で視線誘導
-                const charLocalFrame = frame - charStartFrame;
-                const charDur = Math.max(1, charEndFrame - charStartFrame);
-                const charMid = Math.min(3, charDur / 2);
-                
-                // 🎯 1.1倍スケール + パルスアニメーション（発音中のみ）
-                const charScale = isActive
-                  ? interpolate(
-                      charLocalFrame,
-                      [0, charMid, charDur],
-                      [1, 1.1, 1.1],
-                      { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
-                    )
-                  : 1;
-
-                // 🎨 カラオケスタイルの色分け
-                let charColor: string;
-                let charShadow: string;
-
-                if (isActive) {
-                  // 🔥 現在発音中 → ゴールド (#FFD700) + 1.1倍拡大 + 強烈な発光エフェクト
-                  charColor = "#FFD700"; // ゴールド
-                  charShadow =
-                    "0px 0px 25px rgba(255,215,0,1), " +
-                    "0px 0px 50px rgba(255,215,0,0.9), " +
-                    "0px 0px 75px rgba(255,215,0,0.7), " +
-                    "0px 6px 15px rgba(0,0,0,0.95), " +
-                    "drop-shadow(0px 0px 30px rgba(255,215,0,1))";
-                } else {
-                  // 未発音・発音済み → 白（半透明）で常に表示
-                  charColor = "rgba(255, 255, 255, 0.6)"; // 白（半透明）
-                  charShadow = "0px 0px 8px rgba(255,255,255,0.3), 0px 4px 12px rgba(0,0,0,0.7)";
-                }
-
-                return (
-                  <span
-                    key={`${subtitle.id}-line-${lineIndex}-word-${wordIndex}-char-${charIndex}`}
-                    style={{
-                      display: "inline-block",
-                      whiteSpace: "pre",
-                      transform: `scale(${charScale})`,
-                      transformOrigin: "center center",
-                      color: charColor,
-                      textShadow: charShadow,
-                      padding: "0 2px",
-                    }}
-                  >
-                    {charData.char}
-                  </span>
-                );
-              })}
-            </span>
-          ))}
+          {lineChars}
         </div>
       );
     });
@@ -460,7 +436,7 @@ export const KRiseTikTok3: React.FC = () => {
           borderRadius: 5,
         }}
       >
-        🎯 K-RISE TikTok 3 | Frame: {frame} | Sync: Character-Level
+        🎯 K-RISE TikTok 3 | Frame: {frame} | Hardcoded Segments
       </div>
     </AbsoluteFill>
   );
