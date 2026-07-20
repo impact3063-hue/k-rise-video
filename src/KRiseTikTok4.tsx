@@ -217,7 +217,7 @@ const CharacterSyncSubtitle: React.FC<{
   const characterTimings = subtitle.characters || [];
 
   const isCharacterActive = (charTiming: CharacterTiming): boolean => {
-    return frame >= charTiming.startFrame && frame < charTiming.endFrame;
+    return frame >= charTiming.startFrame && frame <= charTiming.endFrame;
   };
 
   if (frame < startFrame || frame >= endFrame) {
@@ -273,9 +273,20 @@ const CharacterSyncSubtitle: React.FC<{
             }}
           >
             {lineText.split("").map((char, charInLineIndex) => {
-              const currentCharTiming = characterTimings[charIndex];
+              // 改行文字をスキップして次のタイミングデータを取得
+              let currentCharTiming = characterTimings[charIndex];
+              
+              // 改行文字の場合、タイミングデータをスキップ
+              while (currentCharTiming && currentCharTiming.char === "\n" && charIndex < characterTimings.length - 1) {
+                charIndex++;
+                currentCharTiming = characterTimings[charIndex];
+              }
+              
               const isActive =
-                currentCharTiming && isCharacterActive(currentCharTiming);
+                currentCharTiming &&
+                currentCharTiming.char !== "\n" &&
+                isCharacterActive(currentCharTiming);
+              
               charIndex++;
 
               const charColor = isActive ? "#FFD700" : "#FFFFFF";
