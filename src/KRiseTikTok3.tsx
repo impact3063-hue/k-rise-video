@@ -125,12 +125,16 @@ const CharacterLevelSubtitle: React.FC<{
 
   // 字幕内での進行度（0-1）
   const localFrame = frame - startFrame;
-  const totalFrames = endFrame - startFrame;
+  const totalFrames = Math.max(1, endFrame - startFrame);
 
-  // 字幕全体のフェード（固定4フレーム — 行の長さに依存させず、発話開始と同時に即座に可視化）
+  // 字幕全体のフェード（安全なinterpolate - 配列の重複を防止）
+  const fadeInFrames = Math.min(4, Math.floor(totalFrames * 0.3));
+  const fadeOutStart = Math.max(fadeInFrames + 1, totalFrames - Math.min(6, Math.floor(totalFrames * 0.3)));
+  const fadeOutEnd = Math.max(fadeOutStart + 1, totalFrames);
+
   const opacity = interpolate(
     localFrame,
-    [0, 4, totalFrames - 6, totalFrames],
+    [0, fadeInFrames, fadeOutStart, fadeOutEnd],
     [0, 1, 1, 0.8],
     { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
   );
