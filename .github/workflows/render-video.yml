@@ -64,4 +64,5 @@ jobs:
       - name: Notify Discord - Rendering Complete
         if: always()
         run: |
-          curl -X POST -H "Content-Type: application/json" -d '{"content": "🎬 【K-RISE完全開通】動画のレンダリングが完了しました！\n📦 成果物のダウンロードはこちらから：\n${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' ${{ secrets.DISCORD_WEBHOOK_URL }}
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"🎬 【K-RISE完全開通】動画のレンダリングが完了しました！\n📦 成果物のダウンロードはこちら：\n${RUN_URL}\"}" ${{ secrets.DISCORD_WEBHOOK_URL }}
