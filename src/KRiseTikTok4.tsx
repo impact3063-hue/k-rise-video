@@ -242,7 +242,7 @@ const CharacterSyncSubtitle: React.FC<{
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0 5%",
+        padding: "0 8%",
         opacity,
         transform: `scale(${scale * pulse}) translateX(${shake}px)`,
       }}
@@ -292,15 +292,22 @@ const CharacterSyncSubtitle: React.FC<{
                   "0px 6px 15px rgba(0,0,0,0.95), " +
                   "3px 3px 8px rgba(0,0,0,0.9)";
 
+              // CTAセクション用のフォントサイズとレタースペーシング調整
+              const isCTASection = subtitle.id === "seg4-cta";
+              const fontSize = isCTASection
+                ? "clamp(2.0rem, 5.5vw, 3.8rem)"
+                : "clamp(2.4rem, 7vw, 4.5rem)";
+              const letterSpacing = isCTASection ? "1px" : "2px";
+
               return (
                 <span
                   key={`${subtitle.id}-line-${lineIndex}-char-${charInLineIndex}`}
                   style={{
                     display: "inline-block",
-                    fontSize: "clamp(2.4rem, 7vw, 4.5rem)",
+                    fontSize,
                     fontWeight: 900,
                     fontFamily: "'Montserrat', 'Noto Sans JP', sans-serif",
-                    letterSpacing: "2px",
+                    letterSpacing,
                     color: charColor,
                     textShadow: charGlow,
                     WebkitTextStroke: isActive
