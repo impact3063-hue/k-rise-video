@@ -1,0 +1,169 @@
+{
+  "version": "10.0.0-capcut-style",
+  "metadata": {
+    "projectId": "K-RISE-TikTok-CapCut-Style",
+    "title": "K-RISE Dance Project - CapCut Style Phrases",
+    "fps": 30,
+    "duration": 14.0,
+    "totalFrames": 420,
+    "displayMode": "phrase-by-phrase",
+    "description": "Short phrases appear in sync with audio pronunciation"
+  },
+  "audio": {
+    "narration": {
+      "file": "audio.mp3",
+      "volume": 0.8
+    },
+    "bgm": {
+      "file": "bg-music.mp3",
+      "volume": 0.3,
+      "loop": true
+    }
+  },
+  "phrases": [
+    {
+      "text": "ダンス",
+      "startFrame": 3,
+      "endFrame": 18
+    },
+    {
+      "text": "未経験でも",
+      "startFrame": 18,
+      "endFrame": 45
+    },
+    {
+      "text": "世界へ",
+      "startFrame": 48,
+      "endFrame": 64
+    },
+    {
+      "text": "行ける。",
+      "startFrame": 64,
+      "endFrame": 87
+    },
+    {
+      "text": "条件は",
+      "startFrame": 93,
+      "endFrame": 108
+    },
+    {
+      "text": "ただ一つ",
+      "startFrame": 108,
+      "endFrame": 126
+    },
+    {
+      "text": "毎日",
+      "startFrame": 129,
+      "endFrame": 141
+    },
+    {
+      "text": "鏡の前に",
+      "startFrame": 141,
+      "endFrame": 159
+    },
+    {
+      "text": "立つこと。",
+      "startFrame": 159,
+      "endFrame": 177
+    },
+    {
+      "text": "才能は",
+      "startFrame": 183,
+      "endFrame": 198
+    },
+    {
+      "text": "言い訳に",
+      "startFrame": 198,
+      "endFrame": 213
+    },
+    {
+      "text": "ならない",
+      "startFrame": 213,
+      "endFrame": 228
+    },
+    {
+      "text": "本気の",
+      "startFrame": 228,
+      "endFrame": 243
+    },
+    {
+      "text": "覚悟が",
+      "startFrame": 243,
+      "endFrame": 255
+    },
+    {
+      "text": "君を変える！",
+      "startFrame": 255,
+      "endFrame": 270
+    },
+    {
+      "text": "残された",
+      "startFrame": 273,
+      "endFrame": 288
+    },
+    {
+      "text": "席は",
+      "startFrame": 288,
+      "endFrame": 297
+    },
+    {
+      "text": "あとわずか！",
+      "startFrame": 297,
+      "endFrame": 321
+    },
+    {
+      "text": "今すぐ",
+      "startFrame": 327,
+      "endFrame": 345
+    },
+    {
+      "text": "公式LINE",
+      "startFrame": 345,
+      "endFrame": 381
+    },
+    {
+      "text": "から",
+      "startFrame": 381,
+      "endFrame": 390
+    },
+    {
+      "text": "エントリー",
+      "startFrame": 390,
+      "endFrame": 408
+    },
+    {
+      "text": "しよう！",
+      "startFrame": 408,
+      "endFrame": 420
+    }
+  ],
+  "visualEffects": {
+    "background": {
+      "kenBurns": {
+        "enabled": true,
+        "zoomFrom": 1.0,
+        "zoomTo": 1.15,
+        "duration": 420
+      },
+      "neonPulse": {
+        "enabled": true,
+        "color": "#FFD700",
+        "intensity": 0.3,
+        "speed": 2.0
+      }
+    },
+    "phraseAnimation": {
+      "popInScale": 1.1,
+      "fadeInFrames": 5,
+      "fadeOutFrames": 5,
+      "glowColor": "#FFD700",
+      "glowIntensity": 1.5
+    }
+  },
+  "cta": {
+    "text": "プロフィール欄のリンクをタップ！",
+    "startFrame": 330,
+    "endFrame": 420,
+    "showArrow": true
+  }
+}

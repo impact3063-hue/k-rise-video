@@ -5,10 +5,12 @@ import { AudioDrivenComposition } from "./AudioDrivenComposition";
 import { KRiseTikTok3 } from "./KRiseTikTok3";
 import { KRiseTikTok3Enhanced } from "./KRiseTikTok3Enhanced";
 import { KRiseTikTok4 } from "./KRiseTikTok4";
+import { KRiseTikTok5 } from "./KRiseTikTok5";
 import subtitles from "../public/sample-video.json";
 import subtitlesPattern1 from "../public/kpop-audition-pattern1.json";
 import videoDataMaster from "../public/video-data-master.json";
 import videoDataV2 from "../public/video-data-v2-optimized.json";
+import videoDataCapCut from "../public/video-data-capcut-style.json";
 
 export const Root: React.FC = () => {
   const lastSubtitle = subtitles[subtitles.length - 1];
@@ -22,6 +24,9 @@ export const Root: React.FC = () => {
 
   // K-RISE TikTok 4の動画の長さ（video-data-v2-optimized.jsonから取得）
   const durationTikTok4 = (videoDataV2 as any).metadata?.totalFrames || 420;
+
+  // K-RISE TikTok 5の動画の長さ（video-data-capcut-style.jsonから取得）
+  const durationTikTok5 = (videoDataCapCut as any).metadata?.totalFrames || 420;
 
   return (
     <>
@@ -89,6 +94,17 @@ export const Root: React.FC = () => {
         id="KRiseTikTok4"
         component={KRiseTikTok4}
         durationInFrames={durationTikTok4}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
+      {/* 🎯 K-RISE TikTok 5: CapCut Style Phrase Display */}
+      {/* CapCut風：音声完全連動の短いフレーズ表示 */}
+      <Composition
+        id="KRiseTikTok5"
+        component={KRiseTikTok5}
+        durationInFrames={durationTikTok5}
         fps={30}
         width={1080}
         height={1920}
