@@ -639,6 +639,21 @@ def generate_complete_video_data(
         "analytics": analytics
     }
     
+    # 🚨 最終セグメントの自動安全拡張（ラスト字幕消失防止）
+    if subtitles:
+        total_frames = int(duration * fps)
+        
+        # 最終セグメントのendFrameを動画の最後まで延長
+        subtitles[-1]["endFrame"] = total_frames
+        
+        # 最終セグメント内の最後の文字のcharEndFrameも延長
+        if subtitles[-1].get("characters"):
+            subtitles[-1]["characters"][-1]["charEndFrame"] = total_frames
+        
+        print(f"\n   🔧 Final segment auto-extended:")
+        print(f"      Last subtitle: '{subtitles[-1]['text']}'")
+        print(f"      Extended endFrame: {subtitles[-1]['endFrame']} (total: {total_frames})")
+    
     # 保存
     output_path = "public/video-data-master.json"
     with open(output_path, "w", encoding="utf-8") as f:
