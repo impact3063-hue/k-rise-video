@@ -271,25 +271,27 @@ const CharacterLevelSubtitle: React.FC<{
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0 5%",
+        padding: "0 8%",
         opacity,
       }}
     >
       <div
         style={{
           width: "100%",
-          maxWidth: "90%",
+          maxWidth: "84%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          gap: "16px",
+          gap: "12px",
           textAlign: "center",
-          fontSize: "clamp(3rem, 9vw, 5.5rem)",
+          fontSize: "clamp(2.2rem, 6.5vw, 4rem)",
           fontWeight: 900,
           fontFamily: "'Montserrat', 'Noto Sans JP', sans-serif",
-          letterSpacing: "2px",
-          lineHeight: 1.5,
+          letterSpacing: "1.5px",
+          lineHeight: 1.4,
+          wordBreak: "keep-all",
+          overflowWrap: "normal",
         }}
       >
         {renderLines}
