@@ -226,6 +226,8 @@ const CharacterLevelSubtitle: React.FC<{
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
+            whiteSpace: "nowrap",
+            flexWrap: "nowrap",
           }}
         >
           {lineChars}
@@ -259,7 +261,7 @@ const CharacterLevelSubtitle: React.FC<{
       <div
         style={{
           width: "100%",
-          maxWidth: "84%",
+          maxWidth: "90%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -273,6 +275,7 @@ const CharacterLevelSubtitle: React.FC<{
           lineHeight: 1.4,
           wordBreak: "keep-all",
           overflowWrap: "normal",
+          whiteSpace: "normal",
         }}
       >
         {renderLines}
