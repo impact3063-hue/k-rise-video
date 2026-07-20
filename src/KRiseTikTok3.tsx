@@ -259,7 +259,8 @@ const CharacterLevelSubtitle: React.FC<{
   }, [subtitle, frame, lines]);
 
   // 字幕全体の表示判定（全Hooks実行後に判定 — Rules of Hooks遵守）
-  if (frame < startFrame || frame > endFrame) {
+  // 🎯 厳格なセグメント境界：半開区間 [startFrame, endFrame) でオーバーラップを完全防止
+  if (frame < startFrame || frame >= endFrame) {
     return null;
   }
 
