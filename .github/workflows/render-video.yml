@@ -65,4 +65,18 @@ jobs:
         if: always()
         run: |
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          curl -X POST -H "Content-Type: application/json" -d "{\"content\": \"🎬 【K-RISE完全開通】動画のレンダリングが完了しました！\n📦 成果物のダウンロードはこちら：\n${RUN_URL}\"}" ${{ secrets.DISCORD_WEBHOOK_URL }}
+          
+          # 投稿セットの作成
+          CAPTION_TEXT="BTSを日本に導いた伝説のプロデューサー・出口氏が直接審査。\n本気で世界を目指すダンサーだけ、今すぐプロフィール欄の公式LINEからエントリーしてくれ！"
+          HASHTAGS="#KRiseDanceProject #ダンスオーディション #KPOPダンサー #RIIZE #ダンスレッスン #公式LINEへ"
+          SCRIPT_TEXT="BTSを導いた伝説の環境で、お前のダンスを世界基準へ変える。限界を決めんな、今すぐLINEから狂った熱量を見せてみろ。"
+
+          # JSONペイロード作成と送信
+          PAYLOAD=$(jq -n \
+            --arg run_url "$RUN_URL" \
+            --arg caption "$CAPTION_TEXT" \
+            --arg tags "$HASHTAGS" \
+            --arg script "$SCRIPT_TEXT" \
+            '{content: "🎬 **【K-RISE完全開通】動画のレンダリングが完了しました！**\n\n📦 **動画ダウンロード:**\n\($run_url)\n\n───────────────────\n📝 **【SNS投稿用コピペセット】**\n\n**■ 投稿文（キャプション）**\n\($caption)\n\n**■ ハッシュタグ**\n\($tags)\n\n**■ 動画台本**\n\($script)"}')
+
+          curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" ${{ secrets.DISCORD_WEBHOOK_URL }}
