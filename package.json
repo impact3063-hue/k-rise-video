@@ -32,13 +32,15 @@
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
     "validate": "node scripts/validate-video-data.mjs",
-    "generate": "python scripts/generate-master.py",
+    "generate": "echo ⚠️  WARNING: This will overwrite video-data-master.json! Use with caution. && python scripts/generate-master.py",
     "optimize": "python scripts/optimize-params.py",
-    "render-batch": "python scripts/generate-master.py && npm run validate && remotion render KRiseTikTok3 out/auto.mp4 --overwrite",
+    "render-batch": "echo ⚠️  WARNING: This will regenerate video-data-master.json! && python scripts/generate-master.py && npm run validate && remotion render KRiseTikTok3 out/auto.mp4 --overwrite",
     "package-sns": "node package_sns_assets.js",
     "render": "npm run validate && remotion render AudioDrivenVideo output.mp4",
     "render-tiktok3": "npm run validate && remotion render KRiseTikTok3 out/test.mp4",
-    "render-upload": "node scripts/render-and-upload.mjs"
+    "render-tiktok3-safe": "npm run validate && remotion render KRiseTikTok3 out/k-rise-master-v1.mp4 --overwrite",
+    "render-upload": "node scripts/render-and-upload.mjs",
+    "restore-master": "echo 🔒 Restoring locked master template... && copy public\\video-data-master.json.LOCKED public\\video-data-master.json"
   },
   "sideEffects": [
     "*.css"

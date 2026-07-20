@@ -1,4 +1,26 @@
 /**
+ * 🔒 LOCKED MASTER TEMPLATE - DO NOT MODIFY WITHOUT CREATING NEW FILE
+ *
+ * このファイルは K-RISE 初号機マスター動画テンプレート（コミット 3a60dc2）です。
+ *
+ * 🚨 以下の仕様は変更禁止（IMMUTABLE）:
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ * ✓ whiteSpace: "nowrap"     - 自動折り返し完全禁止
+ * ✓ flexWrap: "nowrap"       - 改行制御（\n のみ許可）
+ * ✓ 1文字ゴールド発光: #FFD700 - アクティブ文字の色
+ * ✓ 拡大率: 1.1倍            - アクティブ文字のスケール
+ * ✓ 4セグメント固定構造      - video-data-master.json と完全同期
+ * ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ *
+ * 📝 変更が必要な場合の対応:
+ * 1. このファイルを複製して新しいコンポーネントを作成
+ *    例: KRiseTikTok4.tsx, KRiseTikTok5.tsx
+ * 2. 新しいデータファイルを作成
+ *    例: video-data-v2.json
+ * 3. src/Root.tsx で新しいコンポーネントを登録
+ *
+ * ⚠️ このファイルの直接編集は、マスター動画の再現性を破壊します。
+ *
  * 🎬 K-RISE TikTok Video 3 - Character-Level Gold Sync Animation
  * 完全固定字幕システム + 1文字ずつゴールドハイライト演出
  *
