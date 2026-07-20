@@ -172,19 +172,20 @@ const CharacterLevelSubtitle: React.FC<{
           style={{
             display: "flex",
             flexDirection: "row",
-            flexWrap: "nowrap",
+            flexWrap: "wrap",
             justifyContent: "center",
             alignItems: "center",
-            gap: "0px",
+            gap: "4px",
+            width: "100%",
           }}
         >
           {line.map((wordGroup, wordIndex) => (
             <span
               key={`${subtitle.id}-line-${lineIndex}-word-${wordIndex}`}
               style={{
-                display: "inline-flex",
-                flexWrap: "nowrap",
+                display: "inline-block",
                 whiteSpace: "nowrap",
+                wordBreak: "keep-all",
               }}
             >
               {wordGroup.map((charData, charIndex) => {
