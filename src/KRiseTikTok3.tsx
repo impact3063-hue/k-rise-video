@@ -375,9 +375,10 @@ export const KRiseTikTok3: React.FC = () => {
   const frame = useCurrentFrame();
 
   // 現在表示すべき字幕を取得（パフォーマンス最適化：メモ化）
+  // 🎯 厳格なセグメント境界：半開区間 [startFrame, endFrame) でオーバーラップを完全防止
   const currentSubtitle = useMemo(() => {
     return videoData.subtitles.find(
-      (sub: Subtitle) => frame >= sub.startFrame && frame <= sub.endFrame
+      (sub: Subtitle) => frame >= sub.startFrame && frame < sub.endFrame
     );
   }, [frame]);
 
