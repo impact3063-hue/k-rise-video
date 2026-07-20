@@ -1,13 +1,14 @@
 {
-  "version": "10.0.0-capcut-style",
+  "version": "10.3.0-optimized-phrases",
   "metadata": {
-    "projectId": "K-RISE-TikTok-CapCut-Style",
-    "title": "K-RISE Dance Project - CapCut Style Phrases",
+    "projectId": "K-RISE-TikTok-CapCut-Optimized",
+    "title": "K-RISE Dance Project - Optimized Japanese Phrases",
     "fps": 30,
     "duration": 14.0,
     "totalFrames": 420,
     "displayMode": "phrase-by-phrase",
-    "description": "Short phrases appear in sync with audio pronunciation"
+    "description": "Properly formatted Japanese phrases with Whisper-based timing",
+    "timingSource": "Whisper timestamps with optimized phrase boundaries"
   },
   "audio": {
     "narration": {
@@ -22,118 +23,58 @@
   },
   "phrases": [
     {
-      "text": "ダンス",
-      "startFrame": 3,
-      "endFrame": 18
+      "text": "ダンス未経験でも",
+      "startFrame": 0,
+      "endFrame": 31
     },
     {
-      "text": "未経験でも",
-      "startFrame": 18,
-      "endFrame": 45
+      "text": "世界へ行ける。",
+      "startFrame": 31,
+      "endFrame": 57
     },
     {
-      "text": "世界へ",
-      "startFrame": 48,
-      "endFrame": 64
+      "text": "条件はただ一つ",
+      "startFrame": 73,
+      "endFrame": 117
     },
     {
-      "text": "行ける。",
-      "startFrame": 64,
-      "endFrame": 87
+      "text": "10ヶ月間",
+      "startFrame": 117,
+      "endFrame": 151
     },
     {
-      "text": "条件は",
-      "startFrame": 93,
-      "endFrame": 108
+      "text": "毎日 鏡の前に立つこと。",
+      "startFrame": 151,
+      "endFrame": 208
     },
     {
-      "text": "ただ一つ",
-      "startFrame": 108,
-      "endFrame": 126
+      "text": "才能は言い訳にならない",
+      "startFrame": 227,
+      "endFrame": 278
     },
     {
-      "text": "毎日",
-      "startFrame": 129,
-      "endFrame": 141
-    },
-    {
-      "text": "鏡の前に",
-      "startFrame": 141,
-      "endFrame": 159
-    },
-    {
-      "text": "立つこと。",
-      "startFrame": 159,
-      "endFrame": 177
-    },
-    {
-      "text": "才能は",
-      "startFrame": 183,
-      "endFrame": 198
-    },
-    {
-      "text": "言い訳に",
-      "startFrame": 198,
-      "endFrame": 213
-    },
-    {
-      "text": "ならない",
-      "startFrame": 213,
-      "endFrame": 228
-    },
-    {
-      "text": "本気の",
-      "startFrame": 228,
-      "endFrame": 243
-    },
-    {
-      "text": "覚悟が",
-      "startFrame": 243,
-      "endFrame": 255
+      "text": "本気の覚悟だけが",
+      "startFrame": 289,
+      "endFrame": 328
     },
     {
       "text": "君を変える！",
-      "startFrame": 255,
-      "endFrame": 270
+      "startFrame": 328,
+      "endFrame": 352
     },
     {
-      "text": "残された",
-      "startFrame": 273,
-      "endFrame": 288
+      "text": "残された席はあとわずか！",
+      "startFrame": 352,
+      "endFrame": 386
     },
     {
-      "text": "席は",
-      "startFrame": 288,
-      "endFrame": 297
+      "text": "今すぐ公式LINEから",
+      "startFrame": 386,
+      "endFrame": 403
     },
     {
-      "text": "あとわずか！",
-      "startFrame": 297,
-      "endFrame": 321
-    },
-    {
-      "text": "今すぐ",
-      "startFrame": 327,
-      "endFrame": 345
-    },
-    {
-      "text": "公式LINE",
-      "startFrame": 345,
-      "endFrame": 381
-    },
-    {
-      "text": "から",
-      "startFrame": 381,
-      "endFrame": 390
-    },
-    {
-      "text": "エントリー",
-      "startFrame": 390,
-      "endFrame": 408
-    },
-    {
-      "text": "しよう！",
-      "startFrame": 408,
+      "text": "エントリーしよう！",
+      "startFrame": 403,
       "endFrame": 420
     }
   ],
@@ -162,7 +103,7 @@
   },
   "cta": {
     "text": "プロフィール欄のリンクをタップ！",
-    "startFrame": 330,
+    "startFrame": 352,
     "endFrame": 420,
     "showArrow": true
   }
